@@ -52,7 +52,7 @@ const LimitedOfferHeader = ({ onWatchVideo }) => {
       <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
         <>
           <span className="promo-text text-lg font-semibold tracking-wide">
-            🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">50% OFF</span>
+            🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">40% OFF</span>
           </span>
 
           <div className="countdown font-mono bg-black/30 px-3 py-1 rounded-lg text-yellow-200 text-lg shadow-inner">

@@ -1,26 +1,29 @@
+import Carousel from "./Carousel";
+
 export default function Hero({ onOpenModal }) {
   return (
     <section className="hero bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white py-16">
       <div className="hero-grid container mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
-        
+
         {/* --- Texto Principal --- */}
         <div className="hero-text space-y-6">
           <h1 className="text-5xl font-extrabold leading-tight">
-            🚀 Transforma tu día con <span className="text-yellow-300">SuperProducto</span>
+            ✨ Dale estilo único a tu espacio con la 
+            <span className="text-yellow-300"> Lámpara Tulipán Nube</span>
           </h1>
 
           <p className="text-lg opacity-90">
-            No es solo un producto, es una <b>experiencia</b>.  
-            Miles de personas ya mejoraron su rutina y ahora <b>tú puedes ser el siguiente</b>.  
-            💪 Atrévete a sentir la diferencia desde el primer uso.
+            Ilumina tu habitación con un ambiente cálido y especial.  
+            Y además, llévate <b>Audífonos M10</b> para tu música favorita, ¡incluidos en el combo! 🎧  
+            Perfecto para regalar o para decorar tu cuarto.
           </p>
 
           {/* --- Precios y oferta --- */}
           <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
-            <span className="old-price line-through text-gray-300 text-xl">$199.99</span>
-            <span className="new-price text-yellow-300">$99.99</span>
+            <span className="old-price line-through text-gray-300 text-xl">$89,900</span>
+            <span className="new-price text-yellow-300">$64,900</span>
             <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
-              -50% HOY
+              OFERTA HOY
             </span>
           </div>
 
@@ -30,31 +33,39 @@ export default function Hero({ onOpenModal }) {
               onClick={onOpenModal}
               className="btn-hero bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
             >
-              🛒 ¡Lo quiero ya!
+              🛒 Quiero el Combo
             </button>
 
             <p className="text-sm opacity-80 mt-2 sm:mt-0 sm:ml-2">
-              ⚡ <b>Oferta limitada</b>: solo por hoy.
+              ⚡ <b>Stock limitado</b>
             </p>
           </div>
 
           {/* --- Prueba social --- */}
           <div className="mt-6 text-sm opacity-80">
-            ⭐ Más de <b>10,000 usuarios satisfechos</b>  
+            ⭐ Más de <b>350 habitaciones transformadas</b>  
             <br />
-            ⏰ Envíos rápidos y pago contraentrega.
+            ⏰ Envíos a todo el país. Pago contraentrega disponible.
           </div>
         </div>
 
-        {/* --- Imagen del producto --- */}
-        <div className="hero-image flex justify-center">
-          <img
-            src="src/assets/COMICFEST.jpeg"
-            alt="SuperProducto"
-            className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+{/* --- Imagen del producto --- */}
+<div className="hero-image flex justify-center">
+          <Carousel
+            images={[
+              "src/assets/COMICFEST.jpeg",
+              "src/assets/ratonQ.jpeg",
+              "src/assets/ROBOTIC.jpg"
+            ]}
           />
         </div>
+
+
       </div>
     </section>
-  )
+  );
+
+
 }
+
+
