@@ -13,6 +13,21 @@ html, body {
 
 
 /* =======================================================
+    ✨ ANIMACIONES GLOBALES EN ESTE CASO URGENCIA
+=========================================================*/
+
+@keyframes pulseUrgent {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.urgent-pulse {
+  animation: pulseUrgent 0.9s infinite;
+}
+
+
+
+/* =======================================================
    🎨 PALETA DE COLOR BASADA EN PSICOLOGÍA Y NEUROMARKETING
 =========================================================*/
 :root {

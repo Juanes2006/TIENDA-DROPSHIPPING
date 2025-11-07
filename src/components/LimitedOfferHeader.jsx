@@ -1,46 +1,52 @@
 import React, { useEffect, useState } from "react";
 
 const LimitedOfferHeader = ({ onWatchVideo }) => {
-  // Milisegundos hasta la próxima medianoche (hora local)
-  const getMsToEndOfDay = () => {
-    const now = new Date();
-    const end = new Date(now);
-    end.setHours(24, 0, 0, 0); // 24:00 = medianoche del día siguiente
-    return end.getTime() - now.getTime();
+  // 20 minutos en milisegundos
+  const DURATION = 20 * 60 * 1000;
+
+  const getDeadline = () => {
+    const saved = localStorage.getItem("offerDeadline");
+    const now = Date.now();
+
+    if (saved && Number(saved) > now) {
+      return Number(saved);
+    }
+
+    const newDeadline = now + DURATION;
+    localStorage.setItem("offerDeadline", newDeadline);
+    return newDeadline;
   };
 
-  const [timeLeft, setTimeLeft] = useState(getMsToEndOfDay());
+  const [deadline, setDeadline] = useState(getDeadline());
+  const [timeLeft, setTimeLeft] = useState(deadline - Date.now());
 
   useEffect(() => {
-    const tick = () => setTimeLeft(getMsToEndOfDay());
+    const tick = () => {
+      const remaining = deadline - Date.now();
+      setTimeLeft(remaining > 0 ? remaining : 0);
+    };
 
-    // 1) Tick inicial
     tick();
 
-    // 2) Alinear al borde del segundo real para evitar deriva
     const msToNextSecond = 1000 - (Date.now() % 1000);
-    let intervalId; // importante: variable separada del timeout
+    let intervalId;
 
     const alignTimeoutId = setTimeout(() => {
       tick();
       intervalId = setInterval(tick, 1000);
     }, msToNextSecond);
 
-    // Limpieza
     return () => {
       clearTimeout(alignTimeoutId);
       if (intervalId) clearInterval(intervalId);
     };
-  }, []);
+  }, [deadline]);
 
   const formatTime = (ms) => {
     const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return (
-      String(hours).padStart(2, "0") +
-      ":" +
       String(minutes).padStart(2, "0") +
       ":" +
       String(seconds).padStart(2, "0")
@@ -50,28 +56,32 @@ const LimitedOfferHeader = ({ onWatchVideo }) => {
   return (
     <header className="promo-header bg-gradient-to-r from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
       <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
-        <>
-          <span className="promo-text text-lg font-semibold tracking-wide">
-            🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">40% OFF</span>
-          </span>
 
-          <div className="countdown font-mono bg-black/30 px-3 py-1 rounded-lg text-yellow-200 text-lg shadow-inner">
-            ⏰ {formatTime(timeLeft)}
+        <span className="promo-text text-lg font-semibold tracking-wide">
+          🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">40% OFF</span>
+        </span>
+
+        <div className="countdown urgent-pulse font-mono bg-black/30 px-4 py-2 rounded-lg text-yellow-300 text-xl shadow-lg">
+  ⏰ {formatTime(timeLeft)}
+</div>
+
+
+        {typeof onWatchVideo === "function" && (
+          <div className="hero__actions">
+            <button
+  type="button"
+  onClick={onWatchVideo}
+  className="btn btn--primary urgent-pulse"
+>
+  ⚡ Comprar ahora
+</button>
+
           </div>
+        )}
 
-          {/* Renderiza el botón solo si onWatchVideo es una función */}
-          {typeof onWatchVideo === "function" && (
-            <div className="hero__actions">
-              <button type="button" onClick={onWatchVideo} className="btn btn--primary">
-                ▶   Producto
-              </button>
-            </div>
-          )}
-        </>
       </div>
     </header>
   );
 };
 
 export default LimitedOfferHeader;
-``
