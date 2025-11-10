@@ -22,9 +22,17 @@ const LimitedOfferHeader = ({ onWatchVideo }) => {
 
   useEffect(() => {
     const tick = () => {
-      const remaining = deadline - Date.now();
-      setTimeLeft(remaining > 0 ? remaining : 0);
-    };
+  const remaining = deadline - Date.now();
+
+  if (remaining <= 0) {
+    const newDeadline = Date.now() + DURATION;
+    localStorage.setItem("offerDeadline", newDeadline);
+    setDeadline(newDeadline);
+    return;
+  }
+
+  setTimeLeft(remaining);
+};
 
     tick();
 
