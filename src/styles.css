@@ -119,25 +119,25 @@ html, body {
 .hero-carousel {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  height: 450px;
+  max-width: 390px;
+  height: 500px;
   overflow: hidden;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
-  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
-  width: 100%;
   height: 100%;
-  transition: transform var(--transition-fast);
+  transition: transform 0.4s ease;
 }
 
 .carousel-item {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* ESTA LÍNEA ES LA CLAVE */
 }
 
 .carousel-btn {
@@ -151,22 +151,20 @@ html, body {
   padding: 0.3rem 0.8rem;
   cursor: pointer;
   border-radius: var(--radius-md);
-  opacity: 0.9;
-  transition: var(--transition-fast);
+  opacity: 0.85;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
 }
 
 .carousel-btn:hover {
   opacity: 1;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-
-
-.btn-hero:hover {
-  transform: scale(1.04);
-}
 
 .btn-hero:active {
   transform: scale(0.97);

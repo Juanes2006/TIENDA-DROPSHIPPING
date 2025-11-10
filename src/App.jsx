@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
@@ -7,31 +6,27 @@ import ModalContactForm from "./components/ModalContactForm";
 import LimitedOfferHeader from "./components/LimitedOfferHeader";
 import Ratings from "./components/Ratings";
 
-// IMPORTA el modal de YouTube (ajusta la ruta si está en otra carpeta)
-import ModalYoutubeVideo from "./components/ModalYoutubeVideo";
-// (Opcional) si no importas el CSS dentro del propio componente:
+// usa tu modal de video local
+import ModalVideo from "./components/ModalVideo";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openVideo = () => setShowVideo(true);
-
   const [showVideo, setShowVideo] = useState(false);
 
-  // Mostrar SIEMPRE el video al abrir la app
+  // Mostrar el video apenas abre la app
   useEffect(() => {
     setShowVideo(true);
   }, []);
 
   return (
     <div>
-      <LimitedOfferHeader onWatchVideo={openVideo}  />
+      <LimitedOfferHeader onWatchVideo={() => setShowVideo(true)} />
 
-      <ModalYoutubeVideo
+      <ModalVideo
         open={showVideo}
         onClose={() => setShowVideo(false)}
-        youtubeId="9vBfUj4kKA4"  /* ⟵ ID del video */
-        title="Demo del producto"
-        startWithSoundPreferred={true} /* intentará iniciar con sonido */
+        videoSrc="/videos/videoCortoStich2.mp4"   // ← aquí usas tu archivo
+        title=" El Stitch que Respira y Acompaña tus Momentos"
       />
 
       <Hero onOpenModal={() => setIsModalOpen(true)} />

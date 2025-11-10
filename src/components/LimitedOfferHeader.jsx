@@ -66,18 +66,18 @@ const LimitedOfferHeader = ({ onWatchVideo }) => {
 </div>
 
 
-        {typeof onWatchVideo === "function" && (
           <div className="hero__actions">
             <button
   type="button"
-  onClick={onWatchVideo}
+ 
   className="btn btn--primary urgent-pulse"
 >
-  ⚡ Comprar ahora
+  ⚡ PAGO CONTRAENTREGA
 </button>
 
+
           </div>
-        )}
+        
 
       </div>
     </header>

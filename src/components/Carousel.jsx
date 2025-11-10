@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Carousel({ images }) {
+export default function Carousel({ images, interval = 3500 }) {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
   const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+
+  // Autoplay
+  useEffect(() => {
+    const id = setInterval(next, interval);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <div className="hero-carousel">
