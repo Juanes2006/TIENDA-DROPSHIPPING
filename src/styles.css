@@ -118,10 +118,11 @@ html, body {
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 600;
+  
 }.hero-carousel {
   position: relative;
-  width: 100%;
-  max-width: 290px;
+  width: 380px;
+  max-width: 370px;
   aspect-ratio: 3 / 4; /* Mantiene proporción automáticamente */
   overflow: hidden;
   border-radius: 12px;
