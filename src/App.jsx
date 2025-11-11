@@ -28,12 +28,14 @@ export default function App() {
         videoSrc="/videos/videoCortoStich2.mp4"   // ← aquí usas tu archivo
         title=" Stitch Respira Contigo"
       />
-
-      <Hero onOpenModal={() => setIsModalOpen(true)} />
-      <Benefits />
-      <Ratings />
+      <div className="container">
+        <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <Benefits />
+        <Ratings />
+        
+      </div>
       <Footer />
-      <ModalContactForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <ModalContactForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

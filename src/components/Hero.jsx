@@ -12,7 +12,7 @@ export default function Hero({ onOpenModal }) {
 
           
           <h1 className="text-5xl font-extrabold leading-tight">
-            💙 El <span className="text-yellow-300">Stitch que Respira</span> y Acompaña tus Momentos
+          El <span className="text-blue-300">Stitch que respira</span> y acompaña tus momentos
           </h1>
 
           <p className="text-lg opacity-90">
@@ -31,10 +31,10 @@ export default function Hero({ onOpenModal }) {
           </div>
 
           {/* --- Llamado a la acción --- */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+          <div className="flex flex-col gap-8 mt-4">
             <button
               onClick={onOpenModal}
-              className="btn-hero bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105"
+              className="btn-hero m"
             >
               💙 Lo Quiero Ahora
             </button>
@@ -45,7 +45,7 @@ export default function Hero({ onOpenModal }) {
           </div>
 
           {/* --- Prueba social --- */}
-          <div className="mt-6 text-sm opacity-80">
+          <div className="mt-6 text-sm opacity-70">
             ⭐ Más de <b>400 personas</b> ya tienen su Stitch.
             <br />
             🚚 Envíos a todo el país · Pago contraentrega disponible.

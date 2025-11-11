@@ -10,6 +10,12 @@ html, body {
   background: var(--color-bg-light); /* Opcional */
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 @import "tailwindcss";
 
 /* =======================================================
@@ -18,11 +24,11 @@ html, body {
 
 @keyframes pulseUrgent {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.12); }
+  50% { transform: scale(1.05); }
 }
 
 .urgent-pulse {
-  animation: pulseUrgent 0.9s infinite;
+  animation: pulseUrgent 1.5s infinite;
 }
 
 
@@ -118,22 +124,26 @@ html, body {
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 600;
-}.hero-carousel {
+}
+
+.hero-carousel {
   position: relative;
   width: 100%;
-  max-width: 290px;
+  max-width: 450px;
   aspect-ratio: 3 / 4; /* Mantiene proporción automáticamente */
   overflow: hidden;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+  margin-bottom: 2rem;
 }
 
 .carousel-track {
   display: flex;
   height: 100%;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 
 .carousel-item {
@@ -167,7 +177,7 @@ html, body {
 
 
 .btn-hero:active {
-  transform: scale(0.97);
+  transform: scale(0.1);
 }
 
 
@@ -540,7 +550,7 @@ html, body {
    📱 RESPONSIVE DESIGN
 =========================================================*/
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .hero-grid,
     .product-grid {
         grid-template-columns: 1fr;
