@@ -10,7 +10,7 @@ html, body {
   background: var(--color-bg-light); /* Opcional */
 }
 
-
+@import "tailwindcss";
 
 /* =======================================================
     ✨ ANIMACIONES GLOBALES EN ESTE CASO URGENCIA
@@ -514,18 +514,25 @@ html, body {
 /* =======================================================
    ⚫ FOOTER — “Confianza y cierre elegante”
 =========================================================*/
-
 .footer {
-    background: #111;
-    color: var(--color-text-light);
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.95rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-text-light, #ffffff);
+  padding: 1rem 5rem;
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 .footer p {
-    margin: 0;
-    letter-spacing: 0.3px;
+  margin: 20px 0;
+  letter-spacing: 0.5px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #001e46;
 }
 
 

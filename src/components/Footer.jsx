@@ -2,40 +2,59 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaShieldAlt } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="footer bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white py-10 mt-16">
-      <div className="container mx-auto px-6 text-center space-y-6">
+    <footer className="footer">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-30 text-left md:text-left border-b border-white">
 
-        {/* --- Mensaje emocional de cierre --- */}
-        <h4 className="text-2xl font-bold">
-          💖 Gracias por confiar en <span className="text-yellow-300">SuperProducto</span>
-        </h4>
-        <p className="text-base opacity-90 max-w-2xl mx-auto">
-          Nuestro compromiso es <b>mejorar tu día</b> con innovación, calidad y confianza.  
-          Cada compra impulsa un sueño, y el tuyo es el siguiente en hacerse realidad. 🚀
-        </p>
 
-        {/* --- Íconos sociales / confianza --- */}
-        <div className="flex justify-center gap-6 text-2xl mt-4">
-         
-          <a href="#" className="hover:text-yellow-300 transition-transform hover:scale-310" aria-label="WhatsApp">
-            <FaWhatsapp />
-          </a>
+        {/* Columna 1: Descripción */}
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-5">Kalyzo</h2>
+          <p className="text-sm leading-relaxed text-gray-300">
+            En <span className="text-indigo-400 font-medium">Kalyzo</span> creemos en la confianza,
+            la calidad y la atención personalizada. Encuentra de todo un poco,
+            desde moda hasta tecnología, con envío rápido y seguro.
+          </p>
         </div>
 
-        {/* --- Línea divisoria --- */}
-        <div className="border-t border-white/20 pt-4 mt-6">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-sm opacity-80">
-            <p>
-              &copy; {new Date().getFullYear()} <b>SuperProducto</b> — Todos los derechos reservados.
-            </p>
-            <span className="hidden sm:inline">•</span>
-            <div className="flex items-center gap-2">
-              <FaShieldAlt className="text-yellow-300" />
-              <span>Compra 100% Segura</span>
-            </div>
+        {/* Columna 2: Enlaces útiles */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-3">Enlaces útiles</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a href="#" className="hover:text-indigo-400 transition-colors">Inicio</a></li>
+            <li><a href="#" className="hover:text-indigo-400 transition-colors">Tienda</a></li>
+            <li><a href="#" className="hover:text-indigo-400 transition-colors">Sobre nosotros</a></li>
+            <li><a href="#" className="hover:text-indigo-400 transition-colors">Contacto</a></li>
+            <li><a href="#" className="hover:text-indigo-400 transition-colors">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        {/* Columna 3: Redes sociales y seguridad */}
+        <div className="">
+          <h3 className="text-xl font-semibold text-white mb-3">Siguenos</h3>
+          <br />
+          <div className="flex space-x-4 mb-5 gap-5">
+            <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="p-2 rounded-full hover:bg-pink-500 transition-colors">
+              <FaInstagram />
+            </a>
+            <a href="#" className="p-2 rounded-full hover:bg-green-500 transition-colors">
+              <FaWhatsapp />
+            </a>
           </div>
+          <br />
+          
         </div>
       </div>
+
+      {/* Pie inferior */}
+      <div className="text-center justify-center text-gray-400">
+        <p>© {new Date().getFullYear()} <span className="font-semibold text-white">Kalyzo</span>. Todos los derechos reservados.</p>
+        <br />  
+      </div>
+
+      
     </footer>
   );
 }
