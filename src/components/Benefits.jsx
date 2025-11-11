@@ -3,12 +3,12 @@ import { FaCheckCircle, FaShippingFast, FaShieldAlt } from "react-icons/fa";
 export default function Benefits() {
   return (
     <section
-      className="benefits py-16 bg-gradient-to-b from-indigo-50 via-white to-indigo-50 text-center"
+      className="benefits py-16  from-indigo-50 via-white to-indigo-50 text-center"
       id="benefits"
     >
       <div className="container mx-auto px-6">
         <h3 className="text-3xl md:text-4xl font-extrabold text-indigo-700 mb-12">
-          ¿Por qué elegir <span className="text-pink-600">SuperProducto</span>?
+          ¿Por qué elegir <span className="text-pink-600">Kalyzo</span>?
         </h3>
 
         <div className="benefits-grid grid grid-cols-1 md:grid-cols-3 gap-10">

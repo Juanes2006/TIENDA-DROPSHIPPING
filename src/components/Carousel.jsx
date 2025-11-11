@@ -7,10 +7,7 @@ export default function Carousel({ images, interval = 3500 }) {
   const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
 
   // Autoplay
-  useEffect(() => {
-    const id = setInterval(next, interval);
-    return () => clearInterval(id);
-  }, []);
+
 
   return (
     <div className="hero-carousel">

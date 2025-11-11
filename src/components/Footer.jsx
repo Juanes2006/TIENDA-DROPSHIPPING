@@ -33,8 +33,10 @@ export default function Footer() {
           <h3 className="text-xl font-semibold text-white mb-3">Siguenos</h3>
           <br />
           <div className="flex space-x-4 mb-5 gap-5">
-            <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors">
+            <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors"
+            >
               <FaFacebookF />
+
             </a>
             <a href="#" className="p-2 rounded-full hover:bg-pink-500 transition-colors">
               <FaInstagram />
@@ -50,7 +52,7 @@ export default function Footer() {
 
       {/* Pie inferior */}
       <div className="text-center justify-center text-gray-400">
-        <p>© {new Date().getFullYear()} <span className="font-semibold text-white">Kalyzo</span>. Todos los derechos reservados.</p>
+        <p><span className="font-semibold text-white">Kalyzo</span> Realizada por kalyzotienda@gmail.com </p>
         <br />  
       </div>
 

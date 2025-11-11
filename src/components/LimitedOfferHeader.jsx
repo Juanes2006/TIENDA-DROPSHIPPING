@@ -62,7 +62,7 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
   };
 
   return (
-    <header className="promo-header bg-gradient-to-r from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
+    <header className="promo-header from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
       <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
 
         <span className="promo-text text-lg font-semibold tracking-wide">
@@ -74,13 +74,20 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
 </div>
 
 
+
+
+
+
+
           <div className="hero__actions">
             <button
             onClick={onOpenModal}
             type="button"
             className="btn btn--primary urgent-pulse">
-  ⚡ PAGO CONTRAENTREGA
+  ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
 </button>
+
+
 
 
           </div>

@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 
 export default function Hero({ onOpenModal }) {
   return (
-    <section className="hero bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
+    <section className="hero  from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
       <div className="hero-grid container mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
 
 
@@ -16,15 +16,25 @@ export default function Hero({ onOpenModal }) {
           </h1>
 
           <p className="text-lg opacity-90">
-            El peluche más tierno y relajante del 2025.  
-            Suave, adorable y con movimiento de respiración realista que transmite **calma y compañía**.  
-            Perfecto para dormir acompañado, regalar o tener como decoración especial.
+            Descubre ese abrazo que te hacía falta. Este peluche se mueve suavemente como si respirara, creando una sensación de calma inmediata. Es suave, cálido y transmite compañía auténtica… como dormir junto a alguien que te cuida. Perfecto para noches tranquilas, días difíciles o para regalar a quien quieres proteger.
           </p>
 
           {/* --- Precios y oferta --- */}
           <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
-            <span className="old-price line-through text-gray-300 text-xl">$129,900</span>
-            <span className="new-price text-yellow-300">$59,900</span>
+            <span className="old-price line-through text-gray-300 text-xl">$110,000</span>
+            <span className="new-price text-yellow-300">$64,900</span>
+            <span className="text-blue-600">1 Unidad</span>
+
+            <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
+              HOY 40% OFF
+            </span>
+          </div>
+          <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
+            <span className="old-price line-through text-gray-300 text-xl">$165,900</span>
+            <span className="new-price text-yellow-300">$99,900</span>
+                        <span className=" text-blue-600">2 Unidades</span>
+
+            
             <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
               HOY 40% OFF
             </span>
@@ -56,10 +66,15 @@ export default function Hero({ onOpenModal }) {
         <div className="hero-image flex justify-center">
           <Carousel
             images={[
-              "/imagen6.jpg",
+              "/foto1.png",
 
-              "/imagen5.jpg",
-              "/imagen7.jpeg",
+              "/foto2.png",
+              "/foto3.png",
+              "/foto4.png",
+
+              "/foto5.png",
+              "/foto6.png",
+              "/foto7.png",
             ]}
           />
         </div>
