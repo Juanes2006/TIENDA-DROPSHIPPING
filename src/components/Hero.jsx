@@ -57,10 +57,8 @@ export default function Hero({ onOpenModal }) {
           <Carousel
             images={[
               "/imagen6.jpg",
-              "/imagen2.jpg",
-              "/imagen3.jpg",
-              "/imagen4.jpg",
               "/imagen5.jpg",
+              "/imagen7.jpeg",
             ]}
           />
         </div>

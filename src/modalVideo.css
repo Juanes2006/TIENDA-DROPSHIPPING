@@ -124,6 +124,17 @@
 .btn--ghost:hover { background: rgba(255, 255, 255, 0.06); }
 
 /* Responsivo básico */
-@media (max-width: 480px) {
-  .modal__footer { flex-direction: column; align-items: stretch; }
+/* Mejorar visual en pantallas móviles */
+@media (max-width: 600px) {
+  .modal {
+    max-width: 100vw;
+    width: 100vw;
+    height: auto;
+    border-radius: 12;
+  }
+
+  .aspect-video {
+    padding-top: 100%; /* Tipo TikTok, cuadrado y grande */
+  }
 }
+

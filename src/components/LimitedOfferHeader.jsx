@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const LimitedOfferHeader = ({ onWatchVideo }) => {
+const LimitedOfferHeader = ({ onOpenModal }) => {
   // 20 minutos en milisegundos
   const DURATION = 20 * 60 * 1000;
 
@@ -76,10 +76,9 @@ const LimitedOfferHeader = ({ onWatchVideo }) => {
 
           <div className="hero__actions">
             <button
-  type="button"
- 
-  className="btn btn--primary urgent-pulse"
->
+            onClick={onOpenModal}
+            type="button"
+            className="btn btn--primary urgent-pulse">
   ⚡ PAGO CONTRAENTREGA
 </button>
 

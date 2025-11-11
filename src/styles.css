@@ -57,6 +57,10 @@ html, body {
    🦸 HERO SECTION — “Impacto visual y deseo inmediato”
 =========================================================*/
 
+/* Hero fondo */
+
+
+
 .hero {
   background: var(--color-bg-light);
   color: var(--color-text-dark);
@@ -114,13 +118,11 @@ html, body {
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 600;
-}
-
-.hero-carousel {
+}.hero-carousel {
   position: relative;
   width: 100%;
-  max-width: 390px;
-  height: 500px;
+  max-width: 290px;
+  aspect-ratio: 3 / 4; /* Mantiene proporción automáticamente */
   overflow: hidden;
   border-radius: 12px;
   display: flex;
@@ -137,9 +139,10 @@ html, body {
 .carousel-item {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ESTA LÍNEA ES LA CLAVE */
+  object-fit: contain; /* La imagen se ajusta sin deformarse */
 }
 
+/* Botones del carrusel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -152,14 +155,11 @@ html, body {
   cursor: pointer;
   border-radius: var(--radius-md);
   opacity: 0.85;
+  z-index: 10; /* Asegura que los botones se vean encima */
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
-.carousel-btn.next {
-  right: 10px;
-}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
 .carousel-btn:hover {
   opacity: 1;

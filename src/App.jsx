@@ -20,13 +20,13 @@ export default function App() {
 
   return (
     <div>
-      <LimitedOfferHeader onWatchVideo={() => setShowVideo(true)} />
+      <LimitedOfferHeader onOpenModal={() => setIsModalOpen(true)} />
 
       <ModalVideo
         open={showVideo}
         onClose={() => setShowVideo(false)}
         videoSrc="/videos/videoCortoStich2.mp4"   // ← aquí usas tu archivo
-        title=" El Stitch que Respira y Acompaña tus Momentos"
+        title=" Stitch Respira Contigo"
       />
 
       <Hero onOpenModal={() => setIsModalOpen(true)} />
