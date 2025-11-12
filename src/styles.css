@@ -70,7 +70,7 @@ html, body {
 .hero {
   background: var(--color-bg-light);
   color: var(--color-text-dark);
-  padding: 5rem 2rem;
+  padding: 1rem 1rem;
   text-align: left;
   border-bottom: 1px solid #e5e7eb; /* Línea suave para estructura */
 }
