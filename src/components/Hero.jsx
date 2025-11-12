@@ -23,7 +23,7 @@ export default function Hero({ onOpenModal }) {
           <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
             <span className="old-price line-through text-gray-300 text-xl">$110,000</span>
             <span className="new-price text-yellow-300">$64,900</span>
-            <span className="text-blue-600">1 Unidad</span>
+            <span className="text-blue-600">X1</span>
 
             <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
               HOY 40% OFF
@@ -32,7 +32,7 @@ export default function Hero({ onOpenModal }) {
           <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
             <span className="old-price line-through text-gray-300 text-xl">$165,900</span>
             <span className="new-price text-yellow-300">$99,900</span>
-                        <span className=" text-blue-600">2 Unidades</span>
+                        <span className=" text-blue-600">X2 </span>
 
             
             <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
