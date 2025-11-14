@@ -25,7 +25,7 @@ export default function App() {
       <ModalVideo
         open={showVideo}
         onClose={() => setShowVideo(false)}
-        videoSrc="/videos/stitchVideo.mp4"   // ← aquí usas tu archivo
+        videoSrc="/videos/stitchVideo1.mov"   // ← aquí usas tu archivo
         title=" Stitch Respira Contigo"
       />
       <div className="container">
