@@ -144,8 +144,8 @@ export default function ModalContactForm({ isOpen, onClose }) {
   className="form-select"
 >
   <option value="">Selecciona una opción</option>
-  <option value="1">1 Unidad</option>
-  <option value="2">2 Unidades</option>
+  <option value="1">1 Unidad X 64,900 </option>
+  <option value="2">2 Unidades X 99,900</option>
 </select>
 
 
