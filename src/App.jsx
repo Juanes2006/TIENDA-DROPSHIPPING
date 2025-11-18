@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import ModalContactForm from "./components/ModalContactForm";
 import LimitedOfferHeader from "./components/LimitedOfferHeader";
 import Ratings from "./components/Ratings";
+import BotonWhatsapp from "./components/boton_whatsapp";
+import Especificaciones from "./components/especificaciones.jsx";
 
 // usa tu modal de video local
 import ModalVideo from "./components/ModalVideo";
@@ -30,10 +32,14 @@ export default function App() {
       />
       <div className="container">
         <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <Especificaciones />
         <Benefits />
+        
         <Ratings />
         
+        
       </div>
+      <BotonWhatsapp />
       <Footer />
         <ModalContactForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>

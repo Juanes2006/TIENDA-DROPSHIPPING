@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 
 export default function Hero({ onOpenModal }) {
   return (
-    <section className="hero  from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
+    <section className="hero from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
       <div className="hero-grid container mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
 
 
@@ -67,11 +67,9 @@ export default function Hero({ onOpenModal }) {
           <Carousel
             images={[
               "/foto1.png",
-
               "/foto2.png",
               "/foto3.png",
               "/foto4.png",
-
               "/foto5.png",
               "/foto6.png",
               "/foto7.png",

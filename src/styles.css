@@ -70,7 +70,7 @@ html, body {
 .hero {
   background: var(--color-bg-light);
   color: var(--color-text-dark);
-  padding: 1rem 1rem;
+  padding: 5rem 2rem;
   text-align: left;
   border-bottom: 1px solid #e5e7eb; /* Línea suave para estructura */
 }
@@ -425,7 +425,6 @@ html, body {
     align-items: center;
     z-index: 1000;
     animation: fadeIn 0.3s ease-in-out;
-    padding: 1rem;
 }
 
 .modal-content {

@@ -65,9 +65,14 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
     <header className="promo-header from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
       <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
 
+        <div style={{ width: '60px', height: '60px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', borderRadius: '50%', overflow: 'hidden',}} >
+          <img src="../../kalyzo_nofondo.png" alt="imgenkalyzo" />
+        </div>
+
         <span className="promo-text text-lg font-semibold tracking-wide">
           🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">40% OFF</span>
         </span>
+        
 
         <div className="countdown urgent-pulse font-mono bg-black/30 px-4 py-2 rounded-lg text-yellow-300 text-xl shadow-lg">
   ⏰ {formatTime(timeLeft)}
