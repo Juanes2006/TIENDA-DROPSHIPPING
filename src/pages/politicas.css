@@ -1,0 +1,150 @@
+/* CONTENEDOR GENERAL */
+.pol-container {
+  background: #f4f6ff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.pol-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.pol-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pol-header h1 {
+  font-size: 2.5rem;
+  color: #3a3dbd;
+  font-weight: 800;
+}
+
+.pol-header p {
+  color: #666;
+  margin-top: 10px;
+  font-size: 1.15rem;
+}
+
+.pol-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background: #4a4eed;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.pol-btn:hover {
+  background: #2c31e0;
+}
+
+/* LAYOUT */
+.pol-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .pol-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SIDEBAR */
+.pol-sidebar .pol-card {
+  position: sticky;
+  top: 20px;
+}
+
+.pol-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.pol-sidebar li {
+  margin-bottom: 10px;
+}
+
+.pol-sidebar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.pol-sidebar a:hover {
+  color: #3a3dbd;
+}
+
+/* CARDS */
+.pol-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+}
+
+.pol-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.pol-card h3 {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.pol-card p,
+.pol-card li {
+  color: #555;
+  line-height: 1.7;
+}
+
+.pol-card ul {
+  margin-left: 20px;
+}
+
+/* TABLE */
+.pol-table-wrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.pol-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pol-card th,
+.pol-card td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.pol-card th {
+  background: #f1f1f1;
+  font-weight: bold;
+}
+
+.pol-card tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* DATE SMALL TEXT */
+.pol-date {
+  color: #777;
+  font-size: 0.9rem;
+}

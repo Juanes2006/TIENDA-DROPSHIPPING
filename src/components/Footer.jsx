@@ -1,4 +1,6 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaShieldAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
   return (
@@ -23,8 +25,14 @@ export default function Footer() {
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Inicio</a></li>
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Tienda</a></li>
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Sobre nosotros</a></li>
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Contacto</a></li>
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Política de privacidad</a></li>
+<li>
+  <Link 
+    to="/politicas" 
+    className="hover:text-indigo-400 transition-colors"
+  >
+    Política de privacidad
+  </Link>
+</li>
           </ul>
         </div>
 

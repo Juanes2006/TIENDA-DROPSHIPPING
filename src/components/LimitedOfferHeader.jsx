@@ -66,7 +66,7 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
       <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
 
         <div style={{ width: '60px', height: '60px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', borderRadius: '50%', overflow: 'hidden',}} >
-          <img src="../../kalyzo_nofondo.png" alt="imgenkalyzo" />
+          <img src="/kalyzo_nofondo.png" alt="imgenkalyzo" />
         </div>
 
         <span className="promo-text text-lg font-semibold tracking-wide">

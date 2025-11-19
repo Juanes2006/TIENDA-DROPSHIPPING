@@ -8,9 +8,11 @@ export default function Especificaciones() {
 
   return (
     <section className="container text-center">
-      <h2 className="text-4xl  font-extrabold mb-5 text-center text-gray-900 tracking-tight ">
-        Especificaciones del Producto
-      </h2>
+     
+
+      <h2 className="text-5xl font-extrabold leading-tight">
+          <span className="text-blue-600">Especificaciones del Producto</span>
+          </h2>
 
       {/* Acordeón 1 */}
       <div className="mb-6 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-200">
@@ -31,13 +33,20 @@ export default function Especificaciones() {
             open1 ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden`}
         >
-          <div className="p-5 space-y-3 text-gray-700 text-sm leading-relaxed bg-gray-50">
-            <p>✔️ Material: [escribe aquí]</p>
-            <p>✔️ Dimensiones: [escribe aquí]</p>
-            <p>✔️ Peso: [escribe aquí]</p>
-            <p>✔️ Color(es): [escribe aquí]</p>
-            <p>✔️ Garantía: [escribe aquí]</p>
-          </div>
+         <div className="p-5 space-y-3 text-gray-700 text-sm leading-relaxed bg-gray-50">
+  <p>✔️ <strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
+  <p>✔️ <strong>Dimensiones:</strong> Aproximadamente 30 cm de alto y 20 cm de ancho.</p>
+  <p>✔️ <strong>Colores disponibles:</strong> Azul y Rosado.</p>
+
+  <p>
+    ✔️ <strong>Garantía:</strong>  
+    <br />• Pedido incompleto (Incomplete order): 10 días  
+    <br />• Mal funcionamiento (Malfunction): 10 días  
+    <br />• Producto roto (Broken product): 10 días  
+    <br />• Pedido incorrecto (Different order): 10 días
+  </p>
+</div>
+
         </div>
       </div>
 
@@ -61,12 +70,17 @@ export default function Especificaciones() {
           } overflow-hidden`}
         >
           <div className="p-5 space-y-3 text-gray-700 text-sm leading-relaxed bg-gray-50">
-            <p>⚠️ Uso recomendado: [escribe aquí]</p>
-            <p>⚠️ Precauciones: [escribe aquí]</p>
-            <p>⚠️ No apto para: [escribe aquí]</p>
-            <p>⚠️ Mantenimiento: [escribe aquí]</p>
-            <p>⚠️ Advertencia de seguridad: [escribe aquí]</p>
-          </div>
+  <p>⚠️ Uso recomendado: Ideal para uso decorativo y acompañamiento emocional suave. No utilizar como dispositivo médico ni como herramienta para inducir sueño.</p>
+
+  <p>⚠️ Precauciones: Mantener alejado de fuentes de calor, humedad excesiva y objetos cortopunzantes. No retirar el mecanismo interno de respiración.</p>
+
+  <p>⚠️ No apto para: Niños menores de 1 año, mascotas que puedan morder el mecanismo interno y personas sensibles a luces o movimientos repetitivos.</p>
+
+  <p>⚠️ Mantenimiento: Limpiar únicamente con paño seco. No sumergir en agua ni lavar en lavadora. Cargar o cambiar baterías según indicaciones del proveedor.</p>
+
+  <p>⚠️ Advertencia de seguridad: El producto contiene un módulo interno que simula respiración. No abrir, presionar con fuerza ni manipular el mecanismo para evitar daños o fallos.</p>
+</div>
+
         </div>
       </div>
     </section>
