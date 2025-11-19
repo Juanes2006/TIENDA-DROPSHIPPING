@@ -11,12 +11,13 @@ html, body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  padding: 0 1rem;  
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-@import "tailwindcss";
+
 
 /* =======================================================
     ✨ ANIMACIONES GLOBALES EN ESTE CASO URGENCIA
@@ -550,7 +551,7 @@ html, body {
    📱 RESPONSIVE DESIGN
 =========================================================*/
 /* FIX RESPONSIVO REAL */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
   .hero {
     padding: 3rem 1rem;
@@ -576,6 +577,21 @@ html, body {
     width: 100%;
   }
 }
+
+
+@media (max-width: 768px) {
+  .hero-grid,
+  .product-grid {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+  }
+
+  .hero-carousel {
+      margin: 0 auto;
+    max-width: 100% !important;
+  }
+}
+
 
 
 /* =======================================================
