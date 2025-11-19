@@ -549,25 +549,32 @@ html, body {
 /* =======================================================
    📱 RESPONSIVE DESIGN
 =========================================================*/
+/* FIX RESPONSIVO REAL */
+@media (max-width: 900px) {
 
-@media (max-width: 700px) {
-    .hero-grid,
-    .product-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    .product h3 {
-        font-size: 1.7rem;
-    }
-    .product p {
-        font-size: 1rem;
-    }
-    .btn-primary.big {
-        width: 100%;
-    }
+  .hero {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .product {
+    padding: 3rem 1rem;
+  }
+
+  .hero-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-carousel {
+    max-width: 100%;
+  }
+
+  .btn-primary.big,
+  .btn-hero {
+    width: 100%;
+  }
 }
 
 
