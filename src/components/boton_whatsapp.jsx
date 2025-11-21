@@ -13,7 +13,6 @@ export default function BotonWhatsapp() {
         right-10
         bg-green-500
         text-white
-        p-5
         rounded-full
         shadow-lg
         hover:bg-green-800
@@ -21,6 +20,7 @@ export default function BotonWhatsapp() {
         duration-500
         animate-bounce
         z-50
+        md:p-2
       "
     >
       <FaWhatsapp size={40} />

@@ -38,6 +38,7 @@ export default function App() {
       <BotonWhatsapp />
       <Footer />
       <ModalContactForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        
     </div>
   );
 }

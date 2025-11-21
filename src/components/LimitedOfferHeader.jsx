@@ -62,8 +62,8 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
   };
 
   return (
-    <header className="promo-header from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
-      <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
+    <header className="promo-header">
+      <div className="promo-content  md:flex-row justify-center items-center gap-3">
 
         <div style={{ width: '60px', height: '60px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', borderRadius: '50%', overflow: 'hidden',}} >
           <img src="/kalyzo_nofondo.png" alt="imgenkalyzo" />

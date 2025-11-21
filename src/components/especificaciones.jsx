@@ -1,87 +1,71 @@
-import React, { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
-
-
 export default function Especificaciones() {
-  const [open1, setOpen1] = useState(true);
-  const [open2, setOpen2] = useState(false);
-
   return (
-    <section className="container text-center">
-     
+    <section className="container mx-auto px-6 py-10 text-gray-800 space-y-10  bg-gray-100">
 
-      <h2 className="text-5xl font-extrabold leading-tight">
-          <span className="text-blue-600">Especificaciones del Producto</span>
-          </h2>
 
-      {/* Acordeón 1 */}
-      <div className="mb-6 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-200">
-        <button
-          onClick={() => setOpen1(!open1)}
-          className="w-full flex justify-between items-center p-5 bg-white hover:bg-gray-50 text-gray-900 font-semibold text-lg transition"
-        >
+      {/* Especificaciones Generales */}
+      <div className="">
+        <h3 className="text-3xl font-bold text-center text-blue-700">
           Especificaciones Generales
-          <FaChevronDown
-            className={`${
-              open1 ? "rotate-180" : ""
-            } transition-transform duration-300`}
-          />
-        </button>
+        </h3>
+        
 
-        <div
-          className={`transition-all duration-300 ease-in-out ${
-            open1 ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden`}
-        >
-         <div className="p-5 space-y-3 text-gray-700 text-sm leading-relaxed bg-gray-50">
-  <p>✔️ <strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
-  <p>✔️ <strong>Dimensiones:</strong> Aproximadamente 30 cm de alto y 20 cm de ancho.</p>
-  <p>✔️ <strong>Colores disponibles:</strong> Azul y Rosado.</p>
+        <p><strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
 
-  <p>
-    ✔️ <strong>Garantía:</strong>  
-    <br />• Pedido incompleto (Incomplete order): 10 días  
-    <br />• Mal funcionamiento (Malfunction): 10 días  
-    <br />• Producto roto (Broken product): 10 días  
-    <br />• Pedido incorrecto (Different order): 10 días
-  </p>
-</div>
+        <p><strong>Dimensiones:</strong> Aproximadamente 30 cm de alto y 20 cm de ancho.</p>
 
-        </div>
+        <p><strong>Colores disponibles:</strong> Azul y Rosado.</p>
+
+        <p><strong>Función especial:</strong> Incluye un mecanismo interno que simula la respiración mediante un suave movimiento de expansión del pecho. Este sistema está diseñado para generar calma emocional y sensación de compañía.</p>
+
+        <p><strong>Alimentación:</strong> Funciona con baterías internas (AAA o paquete según proveedor). El módulo de respiración se activa automáticamente al encenderlo.</p>
+
+        <p><strong>Duración estimada:</strong> 6 a 15 horas de funcionamiento continuo dependiendo del tipo de batería.</p>
+
+        <p>
+          <strong>Garantía:</strong>
+          <br />• Pedido incompleto: 10 días  
+          <br />• Mal funcionamiento: 10 días  
+          <br />• Producto roto: 10 días  
+          <br />• Pedido incorrecto: 10 días
+        </p>
       </div>
 
-      {/* Acordeón 2 */}
-      <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-200">
-        <button
-          onClick={() => setOpen2(!open2)}
-          className="w-full flex justify-between items-center p-5 bg-white hover:bg-gray-50 text-gray-900 font-semibold text-lg transition"
-        >
-          Condiciones y Advertencias
-          <FaChevronDown
-            className={`${
-              open2 ? "rotate-180" : ""
-            } transition-transform duration-300`}
-          />
-        </button>
+      {/* Condiciones y Advertencias */}
+      <div className="">
+        <h3 className="text-3xl font-bold text-center text-blue-700 mb-4">
+          ⚠️ Condiciones y Advertencias
+        </h3>
 
-        <div
-          className={`transition-all duration-300 ease-in-out ${
-            open2 ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden`}
-        >
-          <div className="p-5 space-y-3 text-gray-700 text-sm leading-relaxed bg-gray-50">
-  <p>⚠️ Uso recomendado: Ideal para uso decorativo y acompañamiento emocional suave. No utilizar como dispositivo médico ni como herramienta para inducir sueño.</p>
+        <p>
+          <strong>Uso recomendado:</strong> Ideal como acompañamiento emocional, decoración y peluche relajante. No es un dispositivo médico ni está diseñado para inducir sueño clínico.
+        </p>
 
-  <p>⚠️ Precauciones: Mantener alejado de fuentes de calor, humedad excesiva y objetos cortopunzantes. No retirar el mecanismo interno de respiración.</p>
+        <p>
+          <strong>Precauciones:</strong> Mantener alejado de fuentes de calor, humedad excesiva y objetos cortopunzantes. No retirar ni abrir el mecanismo interno de respiración.
+        </p>
 
-  <p>⚠️ No apto para: Niños menores de 1 año, mascotas que puedan morder el mecanismo interno y personas sensibles a luces o movimientos repetitivos.</p>
+        <p>
+          <strong>No apto para:</strong>  
+          • Niños menores de 1 año  
+          • Mascotas que puedan morder el mecanismo  
+          • Personas sensibles a movimientos repetitivos  
+        </p>
 
-  <p>⚠️ Mantenimiento: Limpiar únicamente con paño seco. No sumergir en agua ni lavar en lavadora. Cargar o cambiar baterías según indicaciones del proveedor.</p>
+        <p>
+          <strong>Mantenimiento:</strong> Limpiar únicamente con paño seco.  
+          No lavar en lavadora ni sumergir en agua.  
+          Cambiar o cargar baterías según indicaciones del proveedor.
+        </p>
 
-  <p>⚠️ Advertencia de seguridad: El producto contiene un módulo interno que simula respiración. No abrir, presionar con fuerza ni manipular el mecanismo para evitar daños o fallos.</p>
-</div>
+        <p>
+          <strong>Seguridad del mecanismo:</strong>  El producto incluye un módulo interno que simula la respiración mediante movimiento.  
+          No presionar con fuerza, golpear, abrir o manipular el mecanismo, ya que podría dañarse o causar fallas internas.
+        </p>
 
-        </div>
+        <p>
+          <strong>Recomendación adicional:</strong>  Apagar el módulo cuando no esté en uso para extender la vida útil de la batería y evitar desgaste innecesario del motor interno.
+        </p>
       </div>
     </section>
   );
