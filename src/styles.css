@@ -667,3 +667,48 @@ RATINGS SECTION — “Prueba social y confianza”
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
+
+/* =======================================================
+   📱 FIX PARA PANTALLAS MUY PEQUEÑAS (MENOS DE 400PX)
+=======================================================*/
+@media (max-width: 400px) {
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-price .new-price {
+    font-size: 1.5rem;
+  }
+
+  .hero-price .old-price {
+    font-size: 0.9rem;
+  }
+
+  .hero-carousel {
+    max-width: 100% !important;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .product h3 {
+    font-size: 1.6rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  .ratings-container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+}
