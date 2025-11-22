@@ -215,12 +215,16 @@ h1 {
     text-align: center;
     padding: 0.8rem 1rem;
     font-weight: 700;
-    font-size: 1rem;
     position: sticky;
     top: 0;
     z-index: 999;
     animation: slideDown 0.8s ease;
     letter-spacing: 0.5px;
+    font-size: 0.5rem;
+}
+
+.oferton {
+    font-size: 0.7rem;
 }
 
 .promo-content {
@@ -229,6 +233,7 @@ h1 {
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    
 }
 
 .promo-text.expired {
@@ -240,7 +245,7 @@ h1 {
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
     font-family: monospace;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
