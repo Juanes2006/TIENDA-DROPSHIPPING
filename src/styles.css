@@ -398,7 +398,7 @@ h1 {
 .footer {
   background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
   color: var(--color-text-light, #ffffff);
-  padding: 1rem 5rem;
+  padding: 1rem 1rem;
   text-align: center;
   font-size: 0.95rem;
 }

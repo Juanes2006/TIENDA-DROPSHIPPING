@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="grid grid-cols-2 md:grid-cols-2 text-left border-b pt-2 border-white">
+      <div className="grid grid-cols-2 md:grid-cols- text-left border-b pt-2 border-white">
         
 
         {/* Columna 2: Enlaces útiles */}
@@ -25,6 +25,9 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        
+
+        
 
         {/* Columna 1: Descripción */}
         <div className="mb-6">
@@ -34,31 +37,31 @@ export default function Footer() {
             la calidad y la atención personalizada. Encuentra de todo un poco,
             desde moda hasta tecnología, con envío rápido y seguro.
           </p>
+        </div>
+      </div>
 
-           <div className="flex  space-x-20 mt-6">
-              <h2 className=" text-2xl font-bold text-white">Siguenos</h2>
-              <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors"
-              >
-                <FaFacebookF />
-              </a>
-              <a href="#" className="p-2 rounded-full hover:bg-pink-500 transition-colors">
-                <FaInstagram />
-              </a>
-              <a href="#" className="p-2 rounded-full hover:bg-green-500 transition-colors">
-                <FaWhatsapp />
-              </a>
+      
 
-            </div>    
+      
+
+
+      {/* Pie inferior */}
+
+      <div className="text-center flex flex-col justify-between  ">
+        <div className="flex justify-center space-x-4 flex-row m-4">
+          <h2 className=" text-2xl font-bold text-white">Siguenos</h2>
+          <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors"
+          >
+            <FaFacebookF />
+          </a>
+          <a href="#" className="p-2 rounded-full hover:bg-pink-500 transition-colors">
+            <FaInstagram />
+          </a>
+          <a href="#" className="p-2 rounded-full hover:bg-green-500 transition-colors">
+            <FaWhatsapp />
+          </a>
         </div>
         
-
-        {/* Columna 3: Redes sociales y seguridad */}
-        
-      </div>
-      <div className="text-center flex flex-row justify-between  ">
-
-       
-        {/* Pie inferior */}
           <div className="text-center">
             <p><span className="font-semibold text-white">Kalyzo</span> Realizada por kalyzotienda@gmail.com </p>
           </div>  
