@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import ModalContactForm from "./components/ModalContactForm";
 import LimitedOfferHeader from "./components/LimitedOfferHeader";
 import Ratings from "./components/Ratings";
-import BotonWhatsapp from "./components/Boton_Whatsapp.jsx";
+import BotonWhatsapp from "./components/boton_whatsapp.jsx";
 import Especificaciones from "./components/Especificaciones.jsx";
 import ModalVideo from "./components/ModalVideo";
 
