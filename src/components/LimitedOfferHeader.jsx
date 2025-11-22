@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const LimitedOfferHeader = ({ onOpenModal }) => {
   // 20 minutos en milisegundos
-  const DURATION = 20 * 60 * 1000;
+  const DURATION = 10 * 60 * 1000;
 
   const getDeadline = () => {
     const saved = localStorage.getItem("offerDeadline");
@@ -62,42 +62,29 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
   };
 
   return (
-    <header className="promo-header from-orange-500 to-red-500 text-white text-center py-3 shadow-md">
-      <div className="promo-content flex flex-col md:flex-row justify-center items-center gap-3">
+    <header className="promo-header">
+      <div className=" promo-content ">
 
         <div style={{ width: '60px', height: '60px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', borderRadius: '50%', overflow: 'hidden',}} >
           <img src="/kalyzo_nofondo.png" alt="imgenkalyzo" />
         </div>
 
-        <span className="promo-text text-lg font-semibold tracking-wide">
+        <span className="oferton font-bold text-white">
           🎉 ¡Oferta por tiempo limitado! <span className="text-yellow-300">40% OFF</span>
         </span>
         
 
-        <div className="countdown urgent-pulse font-mono bg-black/30 px-4 py-2 rounded-lg text-yellow-300 text-xl shadow-lg">
-  ⏰ {formatTime(timeLeft)}
-</div>
-
-
-
-
-
-
-
-          <div className="hero__actions">
-            <button
+        <div className="countdown urgent-pulse bg-black/30 rounded-lg text-yellow-300 text-xl shadow-lg">
+      ⏰ {formatTime(timeLeft)}
+        </div>
+        <div className="hero__actions">
+          <button
             onClick={onOpenModal}
             type="button"
             className="btn btn--primary urgent-pulse">
-  ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
-</button>
-
-
-
-
-          </div>
-        
-
+            ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
+          </button>
+        </div>
       </div>
     </header>
   );

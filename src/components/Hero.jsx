@@ -2,13 +2,11 @@ import Carousel from "./Carousel";
 
 export default function Hero({ onOpenModal }) {
   return (
-    <section className="hero from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
+    <section className="hero py-10">
       <div className="hero-grid container mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
 
-
-
         {/* --- Texto Principal --- */}
-        <div className="hero-text space-y-6">
+        <div className="hero-text space-y-6 pt-10">
 
           
           <h1 className="text-5xl font-extrabold leading-tight">
@@ -18,52 +16,52 @@ export default function Hero({ onOpenModal }) {
           <p className="text-lg opacity-90">
             Descubre ese abrazo que te hacía falta. Este peluche se mueve suavemente como si respirara, creando una sensación de calma inmediata. Es suave, cálido y transmite compañía auténtica… como dormir junto a alguien que te cuida. Perfecto para noches tranquilas, días difíciles o para regalar a quien quieres proteger.
           </p>
+          <div className="text-center space-y-4">
+            {/* --- Precios y oferta --- */}
+            <div className="hero-price text-3xl font-bold gap-3">
+              <span className="old-price line-through text-gray-300 text-xl">$110,000</span>
+              <span className="new-price ">$64,900</span>
+              <span className="text-blue-600">X1</span>
 
-          {/* --- Precios y oferta --- */}
-          <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
-            <span className="old-price line-through text-gray-300 text-xl">$110,000</span>
-            <span className="new-price text-yellow-300">$64,900</span>
-            <span className="text-blue-600">X1</span>
+              <span className="discount">
+                HOY 40% OFF
+              </span>
+            </div>
+            <div className="hero-price text-3xl font-bold gap-3">
+              <span className="old-price line-through text-gray-300 text-xl">$165,900</span>
+              <span className="new-price text-yellow-300">$99,900</span>
+                          <span className=" text-blue-600">X2 </span>
 
-            <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
-              HOY 40% OFF
-            </span>
-          </div>
-          <div className="hero-price text-3xl font-bold flex items-baseline gap-3">
-            <span className="old-price line-through text-gray-300 text-xl">$165,900</span>
-            <span className="new-price text-yellow-300">$99,900</span>
-                        <span className=" text-blue-600">X2 </span>
-
-            
-            <span className="discount bg-yellow-400 text-indigo-800 text-sm font-bold px-2 py-1 rounded-md animate-pulse">
-              HOY 40% OFF
-            </span>
+              
+              <span className="discount">
+                HOY 40% OFF
+              </span>
+            </div>
           </div>
 
           {/* --- Llamado a la acción --- */}
-          <div className="flex flex-col gap-8 mt-4">
+          <div className="flex flex-col p-5">
             <button
               onClick={onOpenModal}
-              className="btn-hero m"
+              className="btn-hero"
             >
               💙 Lo Quiero Ahora
             </button>
 
-            <p className="text-sm opacity-80 mt-2 sm:mt-0 sm:ml-2">
+            <p className="opacity-80 mt-10 text-sm">
               ⚡ <b>Últimas unidades</b>
             </p>
-          </div>
-
-          {/* --- Prueba social --- */}
-          <div className="mt-6 text-sm opacity-70">
-            ⭐ Más de <b>400 personas</b> ya tienen su Stitch.
-            <br />
-            🚚 Envíos a todo el país · Pago contraentrega disponible.
+            {/* --- Prueba social --- */}
+            <div className="opacity-70 ">
+              ⭐ Más de <b>400 personas</b> ya tienen su Stitch.
+              <br />
+              🚚 Envíos a todo el país · Pago contraentrega disponible.
+            </div>
           </div>
         </div>
 
         {/* --- Imagen del producto --- */}
-        <div className="hero-image flex justify-center">
+        <div className="">
           <Carousel
             images={[
               "/foto1.png",
