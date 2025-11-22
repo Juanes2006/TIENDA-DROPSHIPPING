@@ -23,7 +23,7 @@ export default function BotonWhatsapp() {
         md:p-2
       "
     >
-      <FaWhatsapp size={40} />
+      <FaWhatsapp size={30} />
     </a>
   );
 }

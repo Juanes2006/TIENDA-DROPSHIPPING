@@ -76,21 +76,14 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
 
         <div className="countdown urgent-pulse font-mono bg-black/30 px-4 py-2 rounded-lg text-yellow-300 text-xl shadow-lg">
   ⏰ {formatTime(timeLeft)}
-</div>
-
-
-
-
-
-
-
-          <div className="hero__actions">
-            <button
-            onClick={onOpenModal}
-            type="button"
-            className="btn btn--primary urgent-pulse">
-  ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
-</button>
+      </div>
+        <div className="hero__actions">
+          <button
+          onClick={onOpenModal}
+          type="button"
+          className="btn btn--primary urgent-pulse">
+          ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
+      </button>
 
 
 

@@ -65,13 +65,6 @@ html, body {
 
 
 
-.hero {
-  background: var(--color-bg-light);
-  color: var(--color-text-dark);
-  border-bottom: 1px solid #e5e7eb; /* Línea suave para estructura */
-}
-
-
 
 h1 {
   color: var(--color-primary);  /* El título llama atención sin saturar */
@@ -88,6 +81,7 @@ h1 {
 .old-price {
   text-decoration: line-through;
   color: var(--color-red-600);
+  opacity: 0.6;
 }
 
 .new-price {
@@ -195,14 +189,11 @@ h1 {
 }
 
 
-
-
 .benefit-card {
     background: var(--color-text-light);
-    padding: 2.5rem 2rem;
     text-align: center;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.055);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -210,21 +201,6 @@ h1 {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
 }
-
-.benefit-card h4 {
-    margin-top: 1rem;
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-
-/* =======================================================
-   🧠 PRODUCT DETAILS — “Racional + Emocional”
-=========================================================*/
-
-
-
-
 
 
 
@@ -414,52 +390,6 @@ h1 {
 
 .footer a:hover {
   color: #001e46;
-}
-
-
-/* =======================================================
-   📱 RESPONSIVE DESIGN
-=========================================================*/
-/* FIX RESPONSIVO REAL */
-@media (max-width: 1024px) {
-
-  .hero {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  .product {
-    padding: 3rem 1rem;
-  }
-
-  .hero-grid,
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .hero-carousel {
-    max-width: 100%;
-  }
-
-  .btn-primary.big,
-  .btn-hero {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .hero-grid,
-  .product-grid {
-      grid-template-columns: 1fr !important;
-      text-align: center;
-  }
-
-  .hero-carousel {
-      margin: 0 auto;
-    max-width: 100% !important;
-  }
 }
 
 

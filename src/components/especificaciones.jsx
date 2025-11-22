@@ -1,14 +1,12 @@
 export default function Especificaciones() {
   return (
-    <section className="container mx-auto px-6 py-10 text-gray-800 space-y-10  bg-gray-100">
-
+    <section className="container mx-auto px-6 py-16 text-gray-800 space-y-10">
 
       {/* Especificaciones Generales */}
-      <div className="">
-        <h3 className="text-3xl font-bold text-center text-blue-700">
+      <div className="bg-white p-8 rounded-xl shadow-md space-y-4">
+        <h3 className="text-3xl font-bold text-start text-blue-700 mb-15">
           Especificaciones Generales
         </h3>
-        
 
         <p><strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
 
@@ -22,19 +20,19 @@ export default function Especificaciones() {
 
         <p><strong>Duración estimada:</strong> 6 a 15 horas de funcionamiento continuo dependiendo del tipo de batería.</p>
 
-        <p>
-          <strong>Garantía:</strong>
-          <br />• Pedido incompleto: 10 días  
-          <br />• Mal funcionamiento: 10 días  
-          <br />• Producto roto: 10 días  
-          <br />• Pedido incorrecto: 10 días
+        <p className="leading-relaxed">
+          <strong>Garantía:</strong><br />
+          • Pedido incompleto: 10 días<br />
+          • Mal funcionamiento: 10 días<br />
+          • Producto roto: 10 días<br />
+          • Pedido incorrecto: 10 días
         </p>
       </div>
 
       {/* Condiciones y Advertencias */}
-      <div className="">
-        <h3 className="text-3xl font-bold text-center text-blue-700 mb-4">
-          ⚠️ Condiciones y Advertencias
+      <div className="bg-white p-8 rounded-xl shadow-md space-y-4">
+        <h3 className="text-3xl font-bold text-start text-blue-700 mb-15">
+          Condiciones y Advertencias
         </h3>
 
         <p>
@@ -45,28 +43,29 @@ export default function Especificaciones() {
           <strong>Precauciones:</strong> Mantener alejado de fuentes de calor, humedad excesiva y objetos cortopunzantes. No retirar ni abrir el mecanismo interno de respiración.
         </p>
 
-        <p>
-          <strong>No apto para:</strong>  
-          • Niños menores de 1 año  
-          • Mascotas que puedan morder el mecanismo  
-          • Personas sensibles a movimientos repetitivos  
+        <p className="leading-relaxed">
+          <strong>No apto para:</strong><br />
+          • Niños menores de 1 año<br />
+          • Mascotas que puedan morder el mecanismo<br />
+          • Personas sensibles a movimientos repetitivos
         </p>
 
-        <p>
-          <strong>Mantenimiento:</strong> Limpiar únicamente con paño seco.  
-          No lavar en lavadora ni sumergir en agua.  
+        <p className="leading-relaxed">
+          <strong>Mantenimiento:</strong> Limpiar únicamente con paño seco.<br />
+          No lavar en lavadora ni sumergir en agua.<br />
           Cambiar o cargar baterías según indicaciones del proveedor.
         </p>
 
-        <p>
-          <strong>Seguridad del mecanismo:</strong>  El producto incluye un módulo interno que simula la respiración mediante movimiento.  
+        <p className="leading-relaxed">
+          <strong>Seguridad del mecanismo:</strong> El producto incluye un módulo interno que simula la respiración mediante movimiento.<br />
           No presionar con fuerza, golpear, abrir o manipular el mecanismo, ya que podría dañarse o causar fallas internas.
         </p>
 
         <p>
-          <strong>Recomendación adicional:</strong>  Apagar el módulo cuando no esté en uso para extender la vida útil de la batería y evitar desgaste innecesario del motor interno.
+          <strong>Recomendación adicional:</strong> Apagar el módulo cuando no esté en uso para extender la vida útil de la batería y evitar desgaste innecesario del motor interno.
         </p>
       </div>
+
     </section>
   );
 }

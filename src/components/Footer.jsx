@@ -40,11 +40,6 @@ export default function Footer() {
         </div>
       </div>
 
-      
-
-      
-
-
       {/* Pie inferior */}
 
       <div className="text-center flex flex-col justify-between  ">
@@ -66,8 +61,6 @@ export default function Footer() {
             <p><span className="font-semibold text-white">Kalyzo</span> Realizada por kalyzotienda@gmail.com </p>
           </div>  
       </div>
-
-      
     </footer>
   );
 }
