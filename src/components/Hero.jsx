@@ -41,23 +41,31 @@ export default function Hero({ onOpenModal }) {
 
           {/* --- Llamado a la acción --- */}
           <div className="flex flex-col p-5">
-            <button
-              onClick={onOpenModal}
-              className="btn-hero"
-            >
-              💙 Lo Quiero Ahora
-            </button>
 
-            <p className="opacity-80 mt-10 text-sm">
-              ⚡ <b>Últimas unidades</b>
-            </p>
-            {/* --- Prueba social --- */}
-            <div className="opacity-70 ">
-              ⭐ Más de <b>400 personas</b> ya tienen su Stitch.
-              <br />
-              🚚 Envíos a todo el país · Pago contraentrega.
-            </div>
-          </div>
+  <button
+    onClick={onOpenModal}
+    className="btn-hero"
+  >
+    💙 ¡Lo Quiero Ahora!
+  </button>
+
+  <p className="mt-3 font-medium">
+    Disponible en <span className="text-blue-600">Azul</span> y <span className="text-pink-500">Rosado</span>
+  </p>
+
+  <p className="mt-6 text-sm opacity-90">
+    ⚡ <b>Quedan pocas unidades en stock</b>
+  </p>
+
+  {/* --- Prueba social --- */}
+  <div className="mt-2 text-sm opacity-70 leading-5">
+    ⭐ <b>400+ personas</b> ya tienen su Stitch que respira.
+    <br />
+    🚚 Envíos a todo el país · Pago contraentrega
+  </div>
+
+</div>
+
         </div>
 
         {/* --- Imagen del producto --- */}
