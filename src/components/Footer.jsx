@@ -14,8 +14,14 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Inicio</a></li>
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Tienda</a></li>
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Sobre nosotros</a></li>
-            <li>
+<li>
+              <Link 
+                to="/politicas" 
+                className="hover:text-indigo-400 transition-colors"
+              >
+                Sobre Noso
+              </Link>
+            </li>            <li>
               <Link 
                 to="/politicas" 
                 className="hover:text-indigo-400 transition-colors"
@@ -45,14 +51,10 @@ export default function Footer() {
       <div className="text-center flex flex-col justify-between  ">
         <div className="flex justify-center space-x-4 flex-row m-4">
           <h2 className=" text-2xl font-bold text-white">Siguenos</h2>
-          <a href="#" className="p-2 rounded-full hover:bg-indigo-600 transition-colors"
-          >
-            <FaFacebookF />
-          </a>
-          <a href="#" className="p-2 rounded-full hover:bg-pink-500 transition-colors">
-            <FaInstagram />
-          </a>
-          <a href="#" className="p-2 rounded-full hover:bg-green-500 transition-colors">
+          
+          <a href="https://wa.me/573206217724?text=¡Hola!%20Quiero%20más%20información."
+      target="_blank"
+      rel="noopener noreferrer" className="p-2 rounded-full hover:bg-green-500 transition-colors">
             <FaWhatsapp />
           </a>
         </div>

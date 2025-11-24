@@ -9,11 +9,11 @@ export default function Hero({ onOpenModal }) {
         <div className="hero-text space-y-6 pt-10">
 
           
-          <h1 className="text-5xl font-extrabold leading-tight">
+          <h1 className="text-5xl font-extrabold leading-tight ">
           El <span className="text-blue-300">Stitch que respira</span> y acompaña tus momentos
           </h1>
 
-          <p className="text-lg opacity-90">
+          <p className="text-lg opacity-90" >
             Descubre ese abrazo que te hacía falta. Este peluche se mueve suavemente como si respirara, creando una sensación de calma inmediata. Es suave, cálido y transmite compañía auténtica… como dormir junto a alguien que te cuida. Perfecto para noches tranquilas, días difíciles o para regalar a quien quieres proteger.
           </p>
           <div className="text-center space-y-4">
@@ -55,7 +55,7 @@ export default function Hero({ onOpenModal }) {
             <div className="opacity-70 ">
               ⭐ Más de <b>400 personas</b> ya tienen su Stitch.
               <br />
-              🚚 Envíos a todo el país · Pago contraentrega disponible.
+              🚚 Envíos a todo el país · Pago contraentrega.
             </div>
           </div>
         </div>

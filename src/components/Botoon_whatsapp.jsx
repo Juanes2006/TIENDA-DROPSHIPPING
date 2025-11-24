@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function BotonWhatsapp() {
   return (
     <a
-      href="https://wa.me/573206217724?text=¡Hola!%20Quiero%20más%20información."
+      href="https://wa.me/573206217724?text=¡Hola!%20Quiero%20más%20información%20sobre%20sus%20productos"
       target="_blank"
       rel="noopener noreferrer"
       className="

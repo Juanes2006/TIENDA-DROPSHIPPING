@@ -1,69 +1,84 @@
+import { useState } from "react";
+
 export default function Especificaciones() {
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
   return (
-    <section className="container mx-auto px-6 py-16 text-gray-800 space-y-10">
+    <section className="container mx-auto px-6 py-16 text-gray-800 space-y-6">
 
-      {/* Especificaciones Generales */}
-      <div className="bg-white p-8 rounded-xl shadow-md space-y-4">
-        <h3 className="text-3xl font-bold text-start text-blue-700 mb-15">
-          Especificaciones Generales
-        </h3>
+      {/* Acordeón 1 – Especificaciones Generales */}
+      <div className="bg-white p-6 rounded-xl shadow-md">
+        <button
+          onClick={() => setOpen1(!open1)}
+          className="w-full flex justify-between items-center text-left"
+        >
+          <h3 className="text-2xl font-bold text-blue-700">
+            Especificaciones Generales
+          </h3>
+          <span className="text-3xl">{open1 ? "−" : "+"}</span>
+        </button>
 
-        <p><strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
-
-        <p><strong>Dimensiones:</strong> Aproximadamente 30 cm de alto y 20 cm de ancho.</p>
-
-        <p><strong>Colores disponibles:</strong> Azul y Rosado.</p>
-
-        <p><strong>Función especial:</strong> Incluye un mecanismo interno que simula la respiración mediante un suave movimiento de expansión del pecho. Este sistema está diseñado para generar calma emocional y sensación de compañía.</p>
-
-        <p><strong>Alimentación:</strong> Funciona con baterías internas (AAA o paquete según proveedor). El módulo de respiración se activa automáticamente al encenderlo.</p>
-
-        <p><strong>Duración estimada:</strong> 6 a 15 horas de funcionamiento continuo dependiendo del tipo de batería.</p>
-
-        <p className="leading-relaxed">
-          <strong>Garantía:</strong><br />
-          • Pedido incompleto: 10 días<br />
-          • Mal funcionamiento: 10 días<br />
-          • Producto roto: 10 días<br />
-          • Pedido incorrecto: 10 días
-        </p>
+        {/* Contenido */}
+        {open1 && (
+          <div className="mt-4 space-y-3">
+            <p><strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
+            <p><strong>Dimensiones:</strong> 30 cm de alto y 20 cm de ancho.</p>
+            <p><strong>Colores disponibles:</strong> Azul y Rosado.</p>
+            <p><strong>Función especial:</strong> Mecanismo interno que simula respiración.</p>
+            <p><strong>Alimentación:</strong> Baterías internas (AAA o paquete según proveedor).</p>
+            <p><strong>Duración estimada:</strong> 6 a 15 horas continuas.</p>
+            <p className="leading-relaxed">
+              <strong>Garantía:</strong><br />
+              • Pedido incompleto: 10 días<br />
+              • Mal funcionamiento: 10 días<br />
+              • Producto roto: 10 días<br />
+              • Pedido incorrecto: 10 días
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* Condiciones y Advertencias */}
-      <div className="bg-white p-8 rounded-xl shadow-md space-y-4">
-        <h3 className="text-3xl font-bold text-start text-blue-700 mb-15">
-          Condiciones y Advertencias
-        </h3>
+      {/* Acordeón 2 – Condiciones y Advertencias */}
+      <div className="bg-white p-6 rounded-xl shadow-md">
+        <button
+          onClick={() => setOpen2(!open2)}
+          className="w-full flex justify-between items-center text-left"
+        >
+          <h3 className="text-2xl font-bold text-blue-700">
+            Condiciones y Advertencias
+          </h3>
+          <span className="text-3xl">{open2 ? "−" : "+"}</span>
+        </button>
 
-        <p>
-          <strong>Uso recomendado:</strong> Ideal como acompañamiento emocional, decoración y peluche relajante. No es un dispositivo médico ni está diseñado para inducir sueño clínico.
-        </p>
-
-        <p>
-          <strong>Precauciones:</strong> Mantener alejado de fuentes de calor, humedad excesiva y objetos cortopunzantes. No retirar ni abrir el mecanismo interno de respiración.
-        </p>
-
-        <p className="leading-relaxed">
-          <strong>No apto para:</strong><br />
-          • Niños menores de 1 año<br />
-          • Mascotas que puedan morder el mecanismo<br />
-          • Personas sensibles a movimientos repetitivos
-        </p>
-
-        <p className="leading-relaxed">
-          <strong>Mantenimiento:</strong> Limpiar únicamente con paño seco.<br />
-          No lavar en lavadora ni sumergir en agua.<br />
-          Cambiar o cargar baterías según indicaciones del proveedor.
-        </p>
-
-        <p className="leading-relaxed">
-          <strong>Seguridad del mecanismo:</strong> El producto incluye un módulo interno que simula la respiración mediante movimiento.<br />
-          No presionar con fuerza, golpear, abrir o manipular el mecanismo, ya que podría dañarse o causar fallas internas.
-        </p>
-
-        <p>
-          <strong>Recomendación adicional:</strong> Apagar el módulo cuando no esté en uso para extender la vida útil de la batería y evitar desgaste innecesario del motor interno.
-        </p>
+        {open2 && (
+          <div className="mt-4 space-y-3">
+            <p>
+              <strong>Uso recomendado:</strong> Acompañamiento emocional y peluche relajante.
+            </p>
+            <p>
+              <strong>Precauciones:</strong> Alejar de calor, humedad y objetos cortopunzantes.
+            </p>
+            <p className="leading-relaxed">
+              <strong>No apto para:</strong><br />
+              • Niños menores de 1 año<br />
+              • Mascotas que puedan morderlo<br />
+              • Personas sensibles a movimientos repetitivos
+            </p>
+            <p className="leading-relaxed">
+              <strong>Mantenimiento:</strong><br />
+              Limpiar con paño seco.<br />
+              No lavar ni sumergir.<br />
+              Cambiar baterías según indicaciones.
+            </p>
+            <p className="leading-relaxed">
+              <strong>Seguridad del mecanismo:</strong> Contiene un módulo interno que simula respiración. No presionar ni abrir.
+            </p>
+            <p>
+              <strong>Recomendación:</strong> Apagar el módulo cuando no esté en uso.
+            </p>
+          </div>
+        )}
       </div>
 
     </section>
