@@ -6,7 +6,6 @@ export default function ModalContactForm({ isOpen, onClose }) {
     nombre: "",
     email: "",
     telefono: "",
-    departmento: "",
     ciudad: "",
     direccion: "",
     unidades: "",
@@ -33,7 +32,6 @@ export default function ModalContactForm({ isOpen, onClose }) {
         nombre,
         email,
         telefono,
-        departmento,
         ciudad,
         direccion,
         unidades,
@@ -49,7 +47,7 @@ export default function ModalContactForm({ isOpen, onClose }) {
           ? `🎨 *Colores:* ${color1} y ${color2}`
           : `🎨 *Color:* ${color1}`
 
-      const texto = `🛍️ *Nuevo Pedido desde la Tienda*\n\n👤 *Nombre:* ${nombre}\n📧 *Correo:* ${email}\n📱 *Teléfono:* ${telefono}\n📍 *Departamento:* ${departmento}\n🏙️ *Ciudad:* ${ciudad}\n📦 *Dirección:* ${direccion}\n📦 *Unidades:* ${unidades}\n${colorInfo}\n📝 *Notas:* ${
+      const texto = `🛍️ *Nuevo Pedido desde la Tienda*\n\n👤 *Nombre:* ${nombre}\n📧 *Correo:* ${email}\n📱 *Teléfono:* ${telefono}\n🏙️ *Ciudad:* ${ciudad}\n📦 *Dirección:* ${direccion}\n📦 *Unidades:* ${unidades}\n${colorInfo}\n📝 *Notas:* ${
         complemento || "(sin observaciones)"
       }\n\n🚀 *Por favor confirma el envío.*`
 
@@ -85,7 +83,6 @@ export default function ModalContactForm({ isOpen, onClose }) {
           <input type="text" name="nombre" placeholder="Nombre completo" value={form.nombre} onChange={handleChange} required />
           <input type="email" name="email" placeholder="Correo electrónico" value={form.email} onChange={handleChange} required />
           <input type="tel" name="telefono" placeholder="Teléfono (10 dígitos)" value={form.telefono} onChange={handleChange} required pattern="^[0-9]{10}$" />
-          <input type="text" name="departmento" placeholder="Departamento" value={form.departmento} onChange={handleChange} required />
           <input type="text" name="ciudad" placeholder="Ciudad" value={form.ciudad} onChange={handleChange} required />
           <input type="text" name="direccion" placeholder="Dirección" value={form.direccion} onChange={handleChange} required />
 
