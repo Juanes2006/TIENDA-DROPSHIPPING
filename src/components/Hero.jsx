@@ -44,13 +44,7 @@ export default function Hero({ onOpenModal }) {
           {/* --- Llamado a la acción --- */}
           <div className="flex flex-col p-5">
 
-  <button
-    onClick={onOpenModal}
-    className="btn-hero  px-6"  
-  >
-    💙 ¡Comprarlo Ahora!
-  </button>
-
+ 
   <p className="mt-3 font-medium">
     Disponible en <span className="text-blue-600">Azul</span> y <span className="text-pink-500">Rosado</span>
   </p>
@@ -83,7 +77,16 @@ export default function Hero({ onOpenModal }) {
               "/foto7.png",
             ]}
           />
+          <button
+    onClick={onOpenModal}
+    className="btn-hero  px-6"  
+  >
+    💙 ¡Comprarlo Ahora!
+  </button>
         </div>
+
+         
+
 
       </div>
     </section>
