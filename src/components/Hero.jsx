@@ -13,9 +13,11 @@ export default function Hero({ onOpenModal }) {
           El <span className="text-blue-300">Stitch que respira</span> y acompaña tus momentos
           </h1>
 
-          <p className="text-lg opacity-90" >
+          <p className="text-lg opacity-90 " >
             Descubre ese abrazo que te hacía falta. Este peluche se mueve suavemente como si respirara, creando una sensación de calma inmediata. Es suave, cálido y transmite compañía auténtica… como dormir junto a alguien que te cuida. Perfecto para noches tranquilas, días difíciles o para regalar a quien quieres proteger.
           </p>
+
+          
           <div className="text-center space-y-4">
             {/* --- Precios y oferta --- */}
             <div className="hero-price text-3xl font-bold gap-3">
@@ -44,9 +46,9 @@ export default function Hero({ onOpenModal }) {
 
   <button
     onClick={onOpenModal}
-    className="btn-hero"
+    className="btn-hero  px-6"  
   >
-    💙 ¡Lo Quiero Ahora!
+    💙 ¡Comprarlo Ahora!
   </button>
 
   <p className="mt-3 font-medium">

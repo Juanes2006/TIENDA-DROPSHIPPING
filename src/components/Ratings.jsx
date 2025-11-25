@@ -70,7 +70,7 @@ export default function Testimonios() {
 
   return (
     <section className="max-w-3xl mx-auto p-6 space-y-8">
-      <h3 className="text-3xl font-bold text-center text-blue-700">
+      <h3 className="text-3xl font-bold text-center text-blue-600">
         Opiniones de Clientes
       </h3>
 

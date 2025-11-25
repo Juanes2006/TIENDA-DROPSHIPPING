@@ -20,7 +20,7 @@ export default function ModalContactForm({ isOpen, onClose }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setForm({ ...form, [name]: value })
+    setForm((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = (e) => {
@@ -28,6 +28,8 @@ export default function ModalContactForm({ isOpen, onClose }) {
     setStatus("loading")
 
     try {
+      const whatsappNumber = "573206217724"
+
       const {
         nombre,
         email,
@@ -40,27 +42,43 @@ export default function ModalContactForm({ isOpen, onClose }) {
         complemento,
       } = form
 
-      const numeroWhatsApp = "573206217724"
-
       const colorInfo =
         unidades === "2"
           ? `🎨 *Colores:* ${color1} y ${color2}`
           : `🎨 *Color:* ${color1}`
 
-      const texto = `🛍️ *Nuevo Pedido desde la Tienda*\n\n👤 *Nombre:* ${nombre}\n📧 *Correo:* ${email}\n📱 *Teléfono:* ${telefono}\n🏙️ *Ciudad:* ${ciudad}\n📦 *Dirección:* ${direccion}\n📦 *Unidades:* ${unidades}\n${colorInfo}\n📝 *Notas:* ${
-        complemento || "(sin observaciones)"
-      }\n\n🚀 *Por favor confirma el envío.*`
+      const mensaje = `
+🧸 *Gracias por tu pedido*  
+Estoy revisando los datos para confirmar tu envío.
 
-      const mensajeCodificado = encodeURIComponent(texto)
-      const url = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`
+👤 *Nombre:* ${nombre}
+📧 *Correo:* ${email}
+📱 *Teléfono:* ${telefono}
+
+📍 *Ciudad:* ${ciudad}
+🏠 *Dirección:* ${direccion}
+
+📦 *Unidades:* ${unidades}
+${colorInfo}
+
+📝 *Notas:* ${complemento || "(sin observaciones)"}
+
+En unos momentos te enviaré la confirmación y el tiempo estimado de entrega.  
+Cualquier duda estaré pendiente para ayudarte.
+`.trim()
+
+
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        mensaje
+      )}`
 
       window.open(url, "_blank")
       setStatus("success")
-      setTimeout(() => setStatus(""), 4000)
-    } catch (error) {
-      console.error("Error al abrir WhatsApp:", error)
+      setTimeout(() => setStatus(""), 3500)
+    } catch (err) {
+      console.error("Error:", err)
       setStatus("error")
-      setTimeout(() => setStatus(""), 4000)
+      setTimeout(() => setStatus(""), 3500)
     }
   }
 
@@ -76,46 +94,59 @@ export default function ModalContactForm({ isOpen, onClose }) {
           ✖
         </button>
 
-        <h3>🛍️ Finaliza tu pedido</h3>
-        <p>Completa tus datos y te contactaremos por WhatsApp para confirmar tu envío.</p>
+        <h3 className="font-bold">🛍️ Completa tu pedido</h3>
+
+<p className="info-privacidad flex items-start gap-2 bg-gray-100 p-3 rounded-lg text-sm border border-gray-300">
+  <span className="text-green-600 text-lg">🔒</span>
+  <span className="text-gray-700 font-medium">
+    Tu información se usa únicamente para procesar tu envío. No compartimos tus datos.
+  </span>
+</p>
+
+
 
         <form onSubmit={handleSubmit} className="contact-form">
-          <input type="text" name="nombre" placeholder="Nombre completo" value={form.nombre} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Correo electrónico" value={form.email} onChange={handleChange} required />
-          <input type="tel" name="telefono" placeholder="Teléfono (10 dígitos)" value={form.telefono} onChange={handleChange} required pattern="^[0-9]{10}$" />
-          <input type="text" name="ciudad" placeholder="Ciudad" value={form.ciudad} onChange={handleChange} required />
-          <input type="text" name="direccion" placeholder="Dirección" value={form.direccion} onChange={handleChange} required />
 
-          <select name="unidades" value={form.unidades} onChange={handleChange} required className="form-select">
-            <option value="">Selecciona cantidad</option>
-            <option value="1">1 Unidad X 64,900</option>
-            <option value="2">2 Unidades X 99,900</option>
+          <input type="text" name="nombre" placeholder="Nombre completo" required value={form.nombre} onChange={handleChange} />
+
+          <input type="email" name="email" placeholder="Correo electrónico" required value={form.email} onChange={handleChange} />
+
+          <input type="tel" name="telefono" placeholder="Teléfono (10 dígitos)" required pattern="^[0-9]{10}$" value={form.telefono} onChange={handleChange} />
+
+          <input type="text" name="ciudad" placeholder="Ciudad" required value={form.ciudad} onChange={handleChange} />
+
+          <input type="text" name="direccion" placeholder="Dirección completa" required value={form.direccion} onChange={handleChange} />
+
+          <select name="unidades" required value={form.unidades} onChange={handleChange}>
+            <option value="">Cantidad</option>
+            <option value="1">1 Unidad — $64.900</option>
+            <option value="2">2 Unidades — $99.900</option>
           </select>
 
-          {/* Color principal */}
-          <select name="color1" value={form.color1} onChange={handleChange} required className="form-select">
+          <select name="color1" required value={form.color1} onChange={handleChange}>
             <option value="">Color Peluche #1</option>
             <option value="Azul">Azul</option>
             <option value="Rosado">Rosado</option>
           </select>
 
-          {/* Segundo color solo si pide 2 */}
           {form.unidades === "2" && (
-            <select name="color2" value={form.color2} onChange={handleChange} required className="form-select">
+            <select name="color2" required value={form.color2} onChange={handleChange}>
               <option value="">Color Peluche #2</option>
               <option value="Azul">Azul</option>
               <option value="Rosado">Rosado</option>
             </select>
           )}
 
-          <input type="text" name="complemento" placeholder="Complemento (opcional)" value={form.complemento} onChange={handleChange} />
+          <input type="text" name="complemento" placeholder="Notas adicionales (opcional)" value={form.complemento} onChange={handleChange} />
 
-          <button type="submit" disabled={status === "loading"} className="submit-btn">
-            {status === "loading" ? "Procesando pedido..." : "Confirmar mi compra"}
+          <button type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "Procesando..." : "Confirmar mi pedido en WhatsApp"}
           </button>
 
-          {status === "success" && <p className="success">✅ Abriendo WhatsApp...</p>}
-          {status === "error" && <p className="error">❌ Error al abrir WhatsApp.</p>}
+          {status === "success" && <p className="success">Abriendo WhatsApp… gracias por tu pedido
+</p>}
+          {status === "error" && <p className="error">No pudimos abrir WhatsApp. Inténtalo de nuevo por favor.
+</p>}
         </form>
       </div>
     </div>

@@ -19,7 +19,7 @@ export default function Footer() {
                 to="/politicas" 
                 className="hover:text-indigo-400 transition-colors"
               >
-                Sobre Noso
+                Sobre Nosotros
               </Link>
             </li>            <li>
               <Link 

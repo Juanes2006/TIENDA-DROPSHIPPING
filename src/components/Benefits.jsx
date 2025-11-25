@@ -7,7 +7,7 @@ export default function Benefits() {
       id="benefits"
     >
       <div className="container mx-auto px-6">
-        <h3 className="text-3xl md:text-4xl font-extrabold text-indigo-700 mb-12">
+        <h3 className="text-3xl md:text-4xl font-bold text-blue-500 mb-12">
           ¿Por qué elegir <span className="text-blue-600">Kalyzo</span>?
         </h3>
 
@@ -17,14 +17,15 @@ export default function Benefits() {
             <div className="flex justify-center mb-4">
               <FaCheckCircle
                 size={50}
-                color="#4f46e5"
+                color="#1909C8
+"
                 className="animate-pulse"
               />
             </div>
-            <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h4 className="text-xl font-semibold text-blue-500 mb-2">
               Calidad premium
             </h4>
-            <p className="text-gray-600">
+            <p className="text-gray-600 font-bold">
               Materiales de alta durabilidad y confianza.
             </p>
           </div>
@@ -34,14 +35,14 @@ export default function Benefits() {
             <div className="flex justify-center mb-4">
               <FaShippingFast
                 size={50}
-                color="#4f46e5"
+                color="#272AF5"
                 className="animate-pulse"
               />
             </div>
-            <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h4 className="text-xl font-semibold text-blue-500 mb-2">
               Envío rápido
             </h4>
-            <p className="text-gray-600">
+            <p className="text-gray-600 font-bold">
               Recíbelo en pocos días, directo a tu puerta.
             </p>
           </div>
@@ -51,14 +52,14 @@ export default function Benefits() {
             <div className="flex justify-center mb-4">
               <FaShieldAlt
                 size={50}
-                color="#4f46e5"
+                color="#272AF5"
                 className="animate-pulse"
               />
             </div>
-            <h4 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h4 className="text-xl font-semibold text-blue-500 mb-2">
               Garantía asegurada
             </h4>
-            <p className="text-gray-600">
+            <p className="text-gray-600 font-bold">
               Compra sin riesgos
             </p>
           </div>

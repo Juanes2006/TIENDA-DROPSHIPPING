@@ -13,7 +13,7 @@ export default function Especificaciones() {
           onClick={() => setOpen1(!open1)}
           className="w-full flex justify-between items-center text-left"
         >
-          <h3 className="text-2xl font-bold text-blue-700">
+          <h3 className="text-2xl font-bold text-blue-600">
             Especificaciones Generales
           </h3>
           <span className="text-3xl">{open1 ? "−" : "+"}</span>
@@ -45,7 +45,7 @@ export default function Especificaciones() {
           onClick={() => setOpen2(!open2)}
           className="w-full flex justify-between items-center text-left"
         >
-          <h3 className="text-2xl font-bold text-blue-700">
+          <h3 className="text-2xl font-bold text-blue-600">
             Condiciones y Advertencias
           </h3>
           <span className="text-3xl">{open2 ? "−" : "+"}</span>
