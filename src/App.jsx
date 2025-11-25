@@ -21,12 +21,7 @@ export default function App() {
     <div>
       <LimitedOfferHeader onOpenModal={() => setIsModalOpen(true)} />
 
-      <ModalVideo
-        open={showVideo}
-        onClose={() => setShowVideo(false)}
-        videoSrc="/videos/stitchVideo1.mov"
-        title=" Stitch Respira Contigo"
-      />
+      
 
       <div className="container">
         <Hero onOpenModal={() => setIsModalOpen(true)} />
