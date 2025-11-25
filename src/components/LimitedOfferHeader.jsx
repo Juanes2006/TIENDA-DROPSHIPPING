@@ -75,32 +75,15 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
         
 
         
-        <button
-  onClick={onOpenModal}
-  type="button"
-  className="
-    btn btn--primary urgent-pulse
-    cursor-pointer
-    transition-all
-    hover:scale-105
-    hover:shadow-lg
-    active:scale-95
-    bg-blue-600 text-white
-    border border-transparent
-    rounded-lg
-    relative
-    flex items-center justify-between
-  "
->
-  <span className="flex-1">
-    ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS
-    <br />
-    ⏰ {formatTime(timeLeft)}
-  </span>
-  <span className="ml-2 text-lg"></span>
-</button>
-
-
+        <div className="hero__actions">
+          <button
+            onClick={onOpenModal}
+            type="button"
+            className="btn btn--primary urgent-pulse">
+            ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS <br />
+             ⏰ {formatTime(timeLeft)}
+          </button>
+        </div>
       </div>
     </header>
   );
