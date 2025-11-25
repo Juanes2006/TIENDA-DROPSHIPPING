@@ -77,12 +77,7 @@ export default function Hero({ onOpenModal }) {
               "/foto7.png",
             ]}
           />
-          <button
-    onClick={onOpenModal}
-    className="btn-hero  px-6"  
-  >
-    💙 ¡Comprarlo Ahora!
-  </button>
+          
         </div>
 
          
