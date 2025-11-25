@@ -77,12 +77,15 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
         
         <div className="hero__actions">
           <button
-            onClick={onOpenModal}
-            type="button"
-            className="btn btn--primary urgent-pulse">
-            ⚡ PAGO CONTRAENTREGA Y ENVÍO GRATIS <br />
-             ⏰ {formatTime(timeLeft)}
-          </button>
+  onClick={onOpenModal}
+  type="button"
+  className="btn btn--primary urgent-pulse"
+>
+  ⚡🚚 *PAGO CONTRAENTREGA + ENVÍO GRATIS* <br />
+  🛒✨ *COMPRAR AHORA*  
+  ⏰ {formatTime(timeLeft)}
+</button>
+
         </div>
       </div>
     </header>
