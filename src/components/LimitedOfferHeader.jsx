@@ -2,65 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const LimitedOfferHeader = ({ onOpenModal }) => {
   // 20 minutos en milisegundos
-  const DURATION = 10 * 60 * 1000;
-
-  const getDeadline = () => {
-    const saved = localStorage.getItem("offerDeadline");
-    const now = Date.now();
-
-    if (saved && Number(saved) > now) {
-      return Number(saved);
-    }
-
-    const newDeadline = now + DURATION;
-    localStorage.setItem("offerDeadline", newDeadline);
-    return newDeadline;
-  };
-
-  const [deadline, setDeadline] = useState(getDeadline());
-  const [timeLeft, setTimeLeft] = useState(deadline - Date.now());
-
-  useEffect(() => {
-    const tick = () => {
-  const remaining = deadline - Date.now();
-
-  if (remaining <= 0) {
-    const newDeadline = Date.now() + DURATION;
-    localStorage.setItem("offerDeadline", newDeadline);
-    setDeadline(newDeadline);
-    return;
-  }
-
-  setTimeLeft(remaining);
-};
-
-    tick();
-
-    const msToNextSecond = 1000 - (Date.now() % 1000);
-    let intervalId;
-
-    const alignTimeoutId = setTimeout(() => {
-      tick();
-      intervalId = setInterval(tick, 1000);
-    }, msToNextSecond);
-
-    return () => {
-      clearTimeout(alignTimeoutId);
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [deadline]);
-
-  const formatTime = (ms) => {
-    const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return (
-      String(minutes).padStart(2, "0") +
-      ":" +
-      String(seconds).padStart(2, "0")
-    );
-  };
-
+  
   return (
     <header className="promo-header">
       <div className=" promo-content ">
@@ -79,11 +21,21 @@ const LimitedOfferHeader = ({ onOpenModal }) => {
           <button
   onClick={onOpenModal}
   type="button"
-  className="btn btn--primary urgent-pulse"
+  className="
+    urgent-pulse
+    bg-(--color-accent)
+    text-(--color-text-dark)
+    font-bold
+    py-4
+    px-6
+    rounded-xl
+    shadow-lg
+    w-full
+    tracking-wide
+  "
 >
-  ⚡🚚 *PAGO CONTRAENTREGA + ENVÍO GRATIS* <br />
-  🛒✨ *COMPRAR AHORA*  
-  ⏰ {formatTime(timeLeft)}
+  ⚡🚚 PAGO CONTRAENTREGA + ENVÍO GRATIS <br />
+  🛒✨ COMPRAR AHORA
 </button>
 
         </div>

@@ -7,7 +7,7 @@ import LimitedOfferHeader from "./components/LimitedOfferHeader";
 import Ratings from "./components/Ratings";
 import BotonWhatsapp from "./components/Botoon_whatsapp.jsx";
 import Especificaciones from "./components/Espeecificaciones.jsx";
-import ModalVideo from "./components/ModalVideo";
+import CalculadorEnvio from "./components/CalculadorEnvio.jsx";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,6 +24,7 @@ export default function App() {
       
 
       <div className="container">
+        <CalculadorEnvio />
         <Hero onOpenModal={() => setIsModalOpen(true)} />
         <Especificaciones />
         <Benefits />
