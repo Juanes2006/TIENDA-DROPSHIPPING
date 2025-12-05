@@ -12,6 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/politicas" element={<PoliciesTermsKalyzo />} />
+
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

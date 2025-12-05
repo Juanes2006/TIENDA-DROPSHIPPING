@@ -28,7 +28,7 @@ export default function ModalContactForm({ isOpen, onClose }) {
     setStatus("loading")
 
     try {
-      const whatsappNumber = "573206217724"
+      const whatsappNumber = "573217618510"
 
       const {
         nombre,
