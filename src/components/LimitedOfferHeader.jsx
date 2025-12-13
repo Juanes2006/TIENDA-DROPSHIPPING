@@ -20,7 +20,7 @@ const LimitedOfferHeader = ({
           <button
             onClick={() => navigate("/")}
             className="
-               px-6 py-3 md:px-8 md:py-4
+              px-4 py-2 md:px-6 md:py-3
               rounded-md
               font-semibold
               border border-white
@@ -28,8 +28,9 @@ const LimitedOfferHeader = ({
               hover:bg-white hover:text-blue-700
               transition
               duration-300
-              w-full md:w-auto
               text-center
+              w-auto
+              md:w-auto
             "
           >
             Home
