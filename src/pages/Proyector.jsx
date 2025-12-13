@@ -63,9 +63,9 @@ export default function Proyector() {
           }
           descripcion="Mini proyector portátil: disfruta películas HD de hasta 60 pulgadas en cualquier lugar. Compacto, ligero y con batería integrada para llevar tu cine a todas partes."
           images={[
-            "/proyector/foto1.png",
-            "/proyector/foto2.png",
-            "/proyector/foto3.png",
+            "/proyector1.png",
+            "/proyector2.png",
+            "/proyector3.png",
            
           ]}
           preciosAntes={{

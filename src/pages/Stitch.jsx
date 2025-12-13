@@ -62,13 +62,13 @@ export default function Stitch() {
   }
 descripcion="Descubre ese abrazo que te hacía falta y deja que Stitch llene tus días de ternura y diversión. Perfecto para acompañarte en cada momento especial."
   images={[
-    "/stitch/foto1.png",
-    "/stitch/foto2.png",
-    "/stitch/foto3.png",
-    "/stitch/foto4.png",
-    "/stitch/foto5.png",
-    "/stitch/foto6.png",
-    "/stitch/foto7.png",
+    "/foto1.png",
+    "/foto2.png",
+    "/foto3.png",
+    "/foto4.png",
+    "/foto5.png",
+    "/foto6.png",
+    "/foto7.png",
   ]}
   preciosAntes={{
     1: 110000,
