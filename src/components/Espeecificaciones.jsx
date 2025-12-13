@@ -1,8 +1,14 @@
 import { useState } from "react";
 
-export default function Especificaciones() {
+export default function Especificaciones({ product }) {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
+
+  // Valores por defecto si no se pasan en product
+  const {
+    especificacionesGenerales = [],
+    condicionesAdvertencias = [],
+  } = product || {};
 
   return (
     <section className="container mx-auto px-6 py-16 text-gray-800 space-y-6">
@@ -19,22 +25,13 @@ export default function Especificaciones() {
           <span className="text-3xl">{open1 ? "−" : "+"}</span>
         </button>
 
-        {/* Contenido */}
         {open1 && (
           <div className="mt-4 space-y-3">
-            <p><strong>Material:</strong> Tela suave, hipoalergénica y segura para todo tipo de piel.</p>
-            <p><strong>Dimensiones:</strong> 30 cm de alto y 20 cm de ancho.</p>
-            <p><strong>Colores disponibles:</strong> Azul y Rosado.</p>
-            <p><strong>Función especial:</strong> Mecanismo interno que simula respiración.</p>
-            <p><strong>Alimentación:</strong> Baterías internas (AAA o paquete según proveedor).</p>
-            <p><strong>Duración estimada:</strong> 6 a 15 horas continuas.</p>
-            <p className="leading-relaxed">
-              <strong>Garantía:</strong><br />
-              • Pedido incompleto: 10 días<br />
-              • Mal funcionamiento: 10 días<br />
-              • Producto roto: 10 días<br />
-              • Pedido incorrecto: 10 días
-            </p>
+            {especificacionesGenerales.map((item, index) => (
+              <p key={index} className={item.leadingRelaxed ? "leading-relaxed" : ""}>
+                <strong>{item.titulo}:</strong> {item.descripcion}
+              </p>
+            ))}
           </div>
         )}
       </div>
@@ -53,30 +50,11 @@ export default function Especificaciones() {
 
         {open2 && (
           <div className="mt-4 space-y-3">
-            <p>
-              <strong>Uso recomendado:</strong> Acompañamiento emocional y peluche relajante.
-            </p>
-            <p>
-              <strong>Precauciones:</strong> Alejar de calor, humedad y objetos cortopunzantes.
-            </p>
-            <p className="leading-relaxed">
-              <strong>No apto para:</strong><br />
-              • Niños menores de 1 año<br />
-              • Mascotas que puedan morderlo<br />
-              • Personas sensibles a movimientos repetitivos
-            </p>
-            <p className="leading-relaxed">
-              <strong>Mantenimiento:</strong><br />
-              Limpiar con paño seco.<br />
-              No lavar ni sumergir.<br />
-              Cambiar baterías según indicaciones.
-            </p>
-            <p className="leading-relaxed">
-              <strong>Seguridad del mecanismo:</strong> Contiene un módulo interno que simula respiración. No presionar ni abrir.
-            </p>
-            <p>
-              <strong>Recomendación:</strong> Apagar el módulo cuando no esté en uso.
-            </p>
+            {condicionesAdvertencias.map((item, index) => (
+              <p key={index} className={item.leadingRelaxed ? "leading-relaxed" : ""}>
+                <strong>{item.titulo}:</strong> {item.descripcion}
+              </p>
+            ))}
           </div>
         )}
       </div>

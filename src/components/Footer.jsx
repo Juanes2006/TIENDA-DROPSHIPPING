@@ -12,8 +12,12 @@ export default function Footer() {
         <div>
           <h2 className=" text-2xl font-bold text-white mb-5">Enlaces útiles</h2>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Inicio</a></li>
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Tienda</a></li>
+<Link 
+                to="/" 
+                className="hover:text-indigo-400 transition-colors"
+              >
+                Inicio
+              </Link>            <li><a href="/" className="hover:text-indigo-400 transition-colors">Tienda</a></li>
 <li>
               <Link 
                 to="/politicas" 

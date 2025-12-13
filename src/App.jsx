@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./components/Hero";
-import Benefits from "./components/Benefits";
 import Footer from "./components/Footer";
 import ModalContactForm from "./components/ModalContactForm";
-import LimitedOfferHeader from "./components/LimitedOfferHeader";
-import Ratings from "./components/Ratings";
 import BotonWhatsapp from "./components/Botoon_whatsapp.jsx";
-import Especificaciones from "./components/Espeecificaciones.jsx";
-import CalculadorEnvio from "./components/CalculadorEnvio.jsx";
+import HomeHeader from "./components/HomeHeader.jsx";
+import MainHome from "./components/MainHome.jsx";
+import Benefits from "./components/Benefits";
+import Ratings from "./components/Ratings";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,17 +17,15 @@ export default function App() {
 
   return (
     <div>
-      <LimitedOfferHeader onOpenModal={() => setIsModalOpen(true)} />
+      <HomeHeader />
+
 
       
 
-      <div className="container">
-        <CalculadorEnvio />
-        <Hero onOpenModal={() => setIsModalOpen(true)} />
-        <Especificaciones />
-        <Benefits />
-        <Ratings />
-      </div>
+      <MainHome />
+      <Benefits />
+      <Ratings />
+
 
       <BotonWhatsapp />
       <Footer />

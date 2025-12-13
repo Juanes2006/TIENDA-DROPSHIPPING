@@ -39,6 +39,15 @@ html, body {
   --shadow-strong: 0 15px 40px rgba(37, 99, 235, 0.25);
   --transition-fast: 0.3s ease;
 }
+.bg-gradient-primary {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-primary)
+  );
+}
+
 
 h1 {
   color: var(--color-primary);
@@ -329,7 +338,7 @@ h1 {
 
 .ratings-title {
   font-size: 1.6rem;
-  color47: #333;
+  color: #333;
   margin-bottom: 15px;
   font-weight: bold;
 }
@@ -501,3 +510,26 @@ h1 {
     font-size: 28px;
   }
 }
+
+
+.marquee {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
