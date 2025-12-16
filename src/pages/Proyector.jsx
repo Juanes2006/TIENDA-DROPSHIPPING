@@ -8,6 +8,7 @@ import Especificaciones from "../components/Espeecificaciones.jsx";
 import CalculadorEnvio from "../components/CalculadorEnvio.jsx";
 import Ratings from "../components/Ratings";
 import Benefits from "../components/Benefits";
+import Cinta from "../components/Cinta.jsx";
 
 export default function Proyector() {
   // 🔹 PRODUCTO DEFINIDO AQUÍ
@@ -50,12 +51,12 @@ export default function Proyector() {
     <div>
       {/* HEADER */}
       <LimitedOfferHeader onOpenModal={() => setSelectedProduct(product)} />
+      <Cinta />
 
       <div className="container">
         <CalculadorEnvio />
         <Hero
-          product={product}
-          onOpenModal={setSelectedProduct}
+          onOpenModal={() => setSelectedProduct(product)}
           titulo={
             <>
               El <span className="text-blue-300">Proyector</span> 4K para una experiencia cinematográfica en casa
@@ -80,10 +81,7 @@ export default function Proyector() {
       
         <Especificaciones product={product}/>
       </div> 
-            <Benefits />
-      
-      <Ratings />
-      
+            
 
       <BotonWhatsapp />
       <Footer />

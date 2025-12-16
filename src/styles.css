@@ -168,8 +168,7 @@ h1 {
   text-align: center;
   padding: 0.8rem 1rem;
   font-weight: 700;
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 999;
   animation: slideDown 0.8s ease;
   letter-spacing: 0.5px;
@@ -512,8 +511,23 @@ h1 {
 }
 
 
+
+
+
+.promo-marquee {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  overflow: hidden;
+}
+
+
 .marquee {
+  
   display: flex;
+  
   gap: 3rem;
   white-space: nowrap;
   animation: marquee 15s linear infinite;
@@ -523,6 +537,7 @@ h1 {
   font-weight: 700;
   font-size: 1rem;
 }
+
 
 @keyframes marquee {
   0% {

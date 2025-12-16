@@ -8,6 +8,7 @@ import Especificaciones from "../components/Espeecificaciones.jsx";
 import CalculadorEnvio from "../components/CalculadorEnvio.jsx";
 import Ratings from "../components/Ratings";
 import Benefits from "../components/Benefits";
+import Cinta from "../components/Cinta.jsx";
 
 export default function Stitch() {
   // 🔹 PRODUCTO DEFINIDO AQUÍ
@@ -49,12 +50,12 @@ export default function Stitch() {
     <div>
       {/* HEADER */}
       <LimitedOfferHeader onOpenModal={() => setSelectedProduct(product)} />
+      <Cinta />
 
       <div className="container">
         <CalculadorEnvio />
         <Hero
-  product={product}
-  onOpenModal={setSelectedProduct}
+  onOpenModal={() => setSelectedProduct(product)}
   titulo={
     <>
       El <span className="text-blue-300">Stitch que respira</span> y acompaña tus momentos
@@ -83,9 +84,6 @@ descripcion="Descubre ese abrazo que te hacía falta y deja que Stitch llene tus
       </div>
 
 
-      <Benefits />
-      <Ratings />
-      
 
       <BotonWhatsapp />
       <Footer />

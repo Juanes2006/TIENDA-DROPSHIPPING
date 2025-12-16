@@ -6,6 +6,7 @@ import HomeHeader from "./components/HomeHeader.jsx";
 import MainHome from "./components/MainHome.jsx";
 import Benefits from "./components/Benefits";
 import Ratings from "./components/Ratings";
+import Cinta from "./components/Cinta.jsx";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
   return (
     <div>
       <HomeHeader />
+      <Cinta />
 
 
       

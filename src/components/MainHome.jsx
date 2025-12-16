@@ -24,15 +24,7 @@ const MainHome = () => {
   return (
     <main className="bg-color-bg-light text-color-text-dark">
       {/* CINTA DESLIZANTE */}
-      <section className="overflow-hidden py-3 bg-color-primary shadow-md">
-  <div className="marquee flex gap-16 text-sm md:text-base font-extrabold text-blacktracking-wide">
-    <span>🔥 ENVÍO GRATIS A TODA COLOMBIA</span>
-    <span>⚡ PAGO CONTRAENTREGA</span>
-    <span>🎁 40% OFF POR TIEMPO LIMITADO</span>
-    <span>⭐ PRODUCTOS EXCLUSIVOS</span>
-  </div>
-</section>
-
+     
 
       {/* PRODUCTOS */}
       <section className="max-w-7xl mx-auto px-4 py-12">

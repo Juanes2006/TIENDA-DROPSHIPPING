@@ -29,6 +29,10 @@ export default function DeliveryEstimator() {
   const deliveryMax = addBusinessDays(3);
 
   return (
+  
+
+    <div>
+      
     <div
       className="
         w-full 
@@ -41,6 +45,7 @@ export default function DeliveryEstimator() {
         shadow-md
       "
     >
+      
       <div className="flex flex-col items-center text-center space-y-4">
         
         {/* Título */}
@@ -69,5 +74,7 @@ export default function DeliveryEstimator() {
         </div>
       </div>
     </div>
+        </div>
+
   );
 }

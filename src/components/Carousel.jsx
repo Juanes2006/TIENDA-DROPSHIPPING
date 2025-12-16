@@ -22,6 +22,8 @@ export default function Carousel({ images, interval = 3500 }) {
 
       <button className="carousel-btn prev" onClick={prev}>‹</button>
       <button className="carousel-btn next" onClick={next}>›</button>
+      
     </div>
+    
   );
 }
