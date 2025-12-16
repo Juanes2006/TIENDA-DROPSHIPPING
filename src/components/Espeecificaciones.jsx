@@ -58,6 +58,10 @@ export default function Especificaciones({ product }) {
           </div>
         )}
       </div>
+      <div>
+        <br />
+        
+      </div>
 
     </section>
   );

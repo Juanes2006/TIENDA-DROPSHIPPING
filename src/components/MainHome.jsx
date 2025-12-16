@@ -17,6 +17,14 @@ const products = [
     link: "/proyector",
     description: "Disfruta de una experiencia cinematográfica en casa. Alta resolución y colores vibrantes.",
   },
+   {
+    id: 3,
+    name: "Hidrolavadora Inalámbrica 2 Baterías 48V + Boquilla 6 en 1",
+    price: "$99.900",
+    image: "/hidrolavadora3.png",
+    link: "/hidrolavadora",
+    description: "Hidrolavadora inalámbrica potente y portátil con 2 baterías de 48V, ideal para limpiar autos, patios y herramientas.",
+  },
   
 ];
 

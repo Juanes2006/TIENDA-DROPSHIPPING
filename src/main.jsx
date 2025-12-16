@@ -7,6 +7,7 @@ import PoliciesTermsKalyzo from './pages/PoliciesTermsKalyzo.jsx'
 import Stitch from './pages/Stitch.jsx'
 import Proyector from './pages/Proyector.jsx'
 import './styles.css'
+import Hidrolavadora from './pages/Hidrolavadora.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,6 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/politicas" element={<PoliciesTermsKalyzo />} />
         <Route path="/stitch-respira" element={<Stitch />} />
         <Route path="/proyector" element={<Proyector />} />
+        <Route path="/hidrolavadora" element={<Hidrolavadora />} />
+
 
 
 
